@@ -1,0 +1,452 @@
+[
+  {
+    "name": "Adidas Nice Shoes",
+    "category": "shoes",
+    "mark": "adidas",
+    "color": "white",
+    "gender": "women",
+    "price": 99.99,
+    "img": "https://i.ibb.co/7p4H974/adidas-shoes-women.webp"
+  },
+  {
+    "name": "Asics Shoes",
+    "category": "shoes",
+    "mark": "asics",
+    "color": "white",
+    "gender": "women",
+    "price": 49.99,
+    "img": "https://i.ibb.co/fFWtyC1/asics-shoes-women.webp"
+  },
+  {
+    "name": "New Balance Shoes",
+    "category": "shoes",
+    "mark": "new balance",
+    "color": "grey",
+    "gender": "women",
+    "price": 39.99,
+    "img": "https://i.ibb.co/mB58QSm/nb-shoes-women.webp"
+  },
+  {
+    "name": "Nike Super Shoes",
+    "category": "shoes",
+    "mark": "nike",
+    "color": "grey",
+    "gender": "women",
+    "price": 119.99,
+    "img": "https://i.ibb.co/3sxnMM2/nike-shoes-women.webp"
+  },
+  {
+    "name": "Reebok Shoes",
+    "category": "shoes",
+    "mark": "reebok",
+    "color": "grey",
+    "gender": "women",
+    "price": 119.99,
+    "img": "https://i.ibb.co/3sxnMM2/nike-shoes-women.webp"
+  },
+  {
+    "name": "Salomon Rock Shoes",
+    "category": "shoes",
+    "mark": "salomon",
+    "color": "white",
+    "gender": "women",
+    "price": 129.99,
+    "img": "https://i.ibb.co/QCnb83p/salomon-shoes-women.webp"
+  },
+  {
+    "name": "Asics Shirt",
+    "category": "shirt",
+    "mark": "asics",
+    "color": "white",
+    "gender": "women",
+    "price": 19.99,
+    "img": "https://i.ibb.co/ZNMwyns/asics-shirt-women.webp"
+  },
+  {
+    "name": "Adidas Shirt",
+    "category": "shirt",
+    "mark": "adidas",
+    "color": "black",
+    "gender": "women",
+    "price": 24.99,
+    "img": "https://i.ibb.co/stfkTfp/adidas-shirt-women.webp"
+  },
+  {
+    "name": "Nike Shirt",
+    "category": "shirt",
+    "mark": "nike",
+    "color": "white",
+    "gender": "women",
+    "price": 24.99,
+    "img": "https://i.ibb.co/X4xKB7r/nike-shirt-women.webp"
+  },
+  {
+    "name": "Reebok Shirt",
+    "category": "shirt",
+    "mark": "reebok",
+    "color": "black",
+    "gender": "women",
+    "price": 14.99,
+    "img": "https://i.ibb.co/GFv5JG3/reebok-shirt-women.webp"
+  },
+  {
+    "name": "Asics Pants",
+    "category": "pants",
+    "mark": "asics",
+    "color": "black",
+    "gender": "women",
+    "price": 14.99,
+    "img": "https://i.ibb.co/b2rmwm5/asics-pants-women.webp"
+  },
+  {
+    "name": "Adidas Pants",
+    "category": "pants",
+    "mark": "adidas",
+    "color": "black",
+    "gender": "women",
+    "price": 19.99,
+    "img": "https://i.ibb.co/K2pG19J/adidas-pants-women.webp"
+  },
+  {
+    "name": "Nike Pants",
+    "category": "pants",
+    "mark": "nike",
+    "color": "black",
+    "gender": "women",
+    "price": 29.99,
+    "img": "https://i.ibb.co/4KhnpLF/nike-pants-women.webp"
+  },
+  {
+    "name": "Reebok Pants",
+    "category": "pants",
+    "mark": "reebok",
+    "color": "black",
+    "gender": "women",
+    "price": 39.99,
+    "img": "https://i.ibb.co/hZYBBfY/reebok-pants-women.webp"
+  },
+  {
+    "name": "Asics Dress",
+    "category": "dress",
+    "mark": "asics",
+    "color": "black",
+    "gender": "women",
+    "price": 49.99,
+    "img": "https://i.ibb.co/WcTF4nZ/asics-dress-women.webp"
+  },
+  {
+    "name": "Adidas Dress",
+    "category": "dress",
+    "mark": "adidas",
+    "color": "white",
+    "gender": "women",
+    "price": 29.99,
+    "img": "https://i.ibb.co/WcTF4nZ/asics-dress-women.webp"
+  },
+  {
+    "name": "Nike Dress",
+    "category": "dress",
+    "mark": "nike",
+    "color": "black",
+    "gender": "women",
+    "price": 89.99,
+    "img": "https://i.ibb.co/92qmjsF/nike-dress-women.webp"
+  },
+  {
+    "name": "Reebok Dress",
+    "category": "dress",
+    "mark": "reebok",
+    "color": "black",
+    "gender": "women",
+    "price": 69.99,
+    "img": "https://i.ibb.co/VT25JXt/reebok-dress-women.webp"
+  },
+  {
+    "name": "Asics T-shirt",
+    "category": "t-shirt",
+    "mark": "asics",
+    "color": "white",
+    "gender": "men",
+    "price": 9.99,
+    "img": "https://i.ibb.co/WzP1T42/asics-t-shirt-men.webp"
+  },
+  {
+    "name": "Adidas T-shirt",
+    "category": "t-shirt",
+    "mark": "adidas",
+    "color": "grey",
+    "gender": "men",
+    "price": 24.99,
+    "img": "https://i.ibb.co/VLK7Yxt/adidas-t-shirt-men.webp"
+  },
+  {
+    "name": "New Balance T-shirt",
+    "category": "t-shirt",
+    "mark": "new balance",
+    "color": "red",
+    "gender": "men",
+    "price": 9.99,
+    "img": "https://i.ibb.co/YWwsRFw/nb-t-shirt-men.webp"
+  },
+  {
+    "name": "Nike T-shirt",
+    "category": "t-shirt",
+    "mark": "nike",
+    "color": "black",
+    "gender": "men",
+    "price": 25.99,
+    "img": "https://i.ibb.co/MCdqSfL/nike-t-shirt-men.webp"
+  },
+  {
+    "name": "Reebok T-shirt",
+    "category": "t-shirt",
+    "mark": "reebok",
+    "color": "grey",
+    "gender": "men",
+    "price": 14.99,
+    "img": "https://i.ibb.co/mNX3cZ0/reebok-t-shirt-men.webp"
+  },
+  {
+    "name": "Asics Shoes",
+    "category": "shoes",
+    "mark": "asics",
+    "color": "grey",
+    "gender": "men",
+    "price": 44.99,
+    "img": "https://i.ibb.co/qNxLLdt/asics-shoes-men.webp"
+  },
+  {
+    "name": "Adidas Shoes",
+    "category": "shoes",
+    "mark": "adidas",
+    "color": "white",
+    "gender": "men",
+    "price": 99.99,
+    "img": "https://i.ibb.co/Ph8r7kj/adidas-shoes-men.webp"
+  },
+  {
+    "name": "New Balance Shoes",
+    "category": "shoes",
+    "mark": "new balance",
+    "color": "white",
+    "gender": "men",
+    "price": 39.99,
+    "img": "https://i.ibb.co/tpq5y81/nb-shoes-men.webp"
+  },
+  {
+    "name": "Reebok Shoes",
+    "category": "shoes",
+    "mark": "reebok",
+    "color": "black",
+    "gender": "men",
+    "price": 29.99,
+    "img": "https://i.ibb.co/FXHvVVY/reebok-shoes-men.webp"
+  },
+  {
+    "name": "Salomon Shoes",
+    "category": "shoes",
+    "mark": "salomon",
+    "color": "white",
+    "gender": "men",
+    "price": 129.99,
+    "img": "https://i.ibb.co/yBKK0C4/salomon-shoes-men.webp"
+  },
+  {
+    "name": "Asics Pants",
+    "category": "pants",
+    "mark": "asics",
+    "color": "black",
+    "gender": "men",
+    "price": 29.99,
+    "img": "https://i.ibb.co/QNKJbGh/asics-pants-men.webp"
+  },
+  {
+    "name": "Adidas Pants",
+    "category": "pants",
+    "mark": "adidas",
+    "color": "black",
+    "gender": "men",
+    "price": 39.99,
+    "img": "https://i.ibb.co/JpGWdPC/adidas-pants-men.webp"
+  },
+  {
+    "name": "Nike Pants",
+    "category": "pants",
+    "mark": "nike",
+    "color": "black",
+    "gender": "men",
+    "price": 39.99,
+    "img": "https://i.ibb.co/7XYLsyZ/nike-pants-men.webp"
+  },
+  {
+    "name": "Reebok Pants",
+    "category": "pants",
+    "mark": "reebok",
+    "color": "white",
+    "gender": "men",
+    "price": 29.99,
+    "img": "https://i.ibb.co/LS5rCPD/reebok-pants-men.webp"
+  },
+  {
+    "name": "Asics Hoodie",
+    "category": "hoodie",
+    "mark": "asics",
+    "color": "black",
+    "gender": "men",
+    "price": 24.99,
+    "img": "https://i.ibb.co/qJq9x4R/asics-hoodie-men.webp"
+  },
+  {
+    "name": "Adidas Hoodie",
+    "category": "hoodie",
+    "mark": "adidas",
+    "color": "white",
+    "gender": "men",
+    "price": 34.99,
+    "img": "https://i.ibb.co/pbn73kf/adidas-hoodie-men.webp"
+  },
+  {
+    "name": "New Balance Hoodie",
+    "category": "hoodie",
+    "mark": "new balance",
+    "color": "white",
+    "gender": "men",
+    "price": 19.99,
+    "img": "https://i.ibb.co/WHrxKG3/nb-hoodie-men.webp"
+  },
+  {
+    "name": "Nike Hoodie",
+    "category": "hoodie",
+    "mark": "nike",
+    "color": "grey",
+    "gender": "men",
+    "price": 49.99,
+    "img": "https://i.ibb.co/GQ6P6KV/nike-hoodie-men.webp"
+  },
+  {
+    "name": "Reebok Hoodie",
+    "category": "hoodie",
+    "mark": "reebok",
+    "color": "grey",
+    "gender": "men",
+    "price": 29.99,
+    "img": "https://i.ibb.co/BZCN9y3/reebok-hoodie-men.webp"
+  },
+  {
+    "name": "Adidas T-shirt",
+    "category": "t-shirt",
+    "mark": "adidas",
+    "color": "grey",
+    "gender": "kids",
+    "price": 9.99,
+    "img": "https://i.ibb.co/Sm6N3rJ/adidas-t-shirt-kids.webp"
+  },
+  {
+    "name": "Asics T-shirt",
+    "category": "t-shirt",
+    "mark": "asics",
+    "color": "blue",
+    "gender": "kids",
+    "price": 9.99,
+    "img": "https://i.ibb.co/MkkFZjm/asics-t-shirt-kids.webp"
+  },
+  {
+    "name": "New Balance T-shirt",
+    "category": "t-shirt",
+    "mark": "new balance",
+    "color": "black",
+    "gender": "kids",
+    "price": 9.99,
+    "img": "https://i.ibb.co/JC5Nc5x/nb-t-shirt-kids.webp"
+  },
+  {
+    "name": "Nike T-shirt",
+    "category": "t-shirt",
+    "mark": "nike",
+    "color": "black",
+    "gender": "kids",
+    "price": 9.99,
+    "img": "https://i.ibb.co/k8DgjDt/nike-t-shirt-kids.webp"
+  },
+  {
+    "name": "Asics Shoes",
+    "category": "shoes",
+    "mark": "asics",
+    "color": "black",
+    "gender": "kids",
+    "price": 19.99,
+    "img": "https://i.ibb.co/WW5PpYM/asics-shoes-kids.webp"
+  },
+  {
+    "name": "Asics Shoes",
+    "category": "shoes",
+    "mark": "asics",
+    "color": "black",
+    "gender": "kids",
+    "price": 19.99,
+    "img": "https://i.ibb.co/WW5PpYM/asics-shoes-kids.webp"
+  },
+  {
+    "name": "Adidas Shoes",
+    "category": "shoes",
+    "mark": "adidas",
+    "color": "white",
+    "gender": "kids",
+    "price": 24.99,
+    "img": "https://i.ibb.co/df2Qjcq/adidas-shoes-kids.webp"
+  },
+  {
+    "name": "New Balance Shoes",
+    "category": "shoes",
+    "mark": "new balance",
+    "color": "white",
+    "gender": "kids",
+    "price": 29.99,
+    "img": "https://i.ibb.co/NZPxRw5/nb-shoes-kids.webp"
+  },
+  {
+    "name": "Nike Shoes",
+    "category": "shoes",
+    "mark": "nike",
+    "color": "white",
+    "gender": "kids",
+    "price": 29.99,
+    "img": "https://i.ibb.co/ZVTZfvy/nike-shoes-kids.webp"
+  },
+  {
+    "name": "Reebok Shoes",
+    "category": "shoes",
+    "mark": "reebok",
+    "color": "white",
+    "gender": "kids",
+    "price": 24.99,
+    "img": "https://i.ibb.co/b620Yg6/reebok-shoes-kids.webp"
+  },
+  {
+    "name": "Salomon Shoes",
+    "category": "shoes",
+    "mark": "salomon",
+    "color": "black",
+    "gender": "kids",
+    "price": 49.99,
+    "img": "https://i.ibb.co/n1Vk8LS/salomon-shoes-kids.webp"
+  },
+  {
+    "name": "Nike Pants",
+    "category": "pants",
+    "mark": "nike",
+    "color": "black",
+    "gender": "kids",
+    "price": 34.99,
+    "img": "https://i.ibb.co/f9gNZwt/nike-pants-kids.webp"
+  },
+  {
+    "name": "adidas Pants",
+    "category": "pants",
+    "mark": "adidas",
+    "color": "black",
+    "gender": "kids",
+    "price": 34.99,
+    "img": "https://i.ibb.co/3pCCK1D/adidas-pants-kids.webp"
+  }
+]

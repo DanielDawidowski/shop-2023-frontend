@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimatePresence } from "framer-motion";
-import { NavStyles } from "./navStyles";
+import { NavStyles } from "./navigationStyles";
 import Hamburger from "../hamburger/hamburger";
 
 function Nav({ toggleMenu, setToggleMenu, toggleTheme }) {

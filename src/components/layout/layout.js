@@ -1,38 +1,8 @@
 import React, { useState } from "react";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import Header from "../navs/header/header";
-import Nav from "../navs/nav/nav";
-
-const GlobalStyle = createGlobalStyle`
-* {
-  margin: 0;
-  padding: 0;
-  }
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased; 
-    -webkit-tap-highlight-color: transparent;
-}
-body {
-    background: ${(props) => props.theme.background};
-    color: ${(props) => props.theme.color};
-  }
-a {
-  text-decoration: none
-}
-  a:focus {
-    outline: none;
-  }
-ul {
-  list-style: none
-}
-li {
-  list-style-type: none
-}
-img {
-    max-width: 100%;
-}
-`;
+import Nav from "../navs/navigation/navigation";
+import { GlobalStyle } from "./layoutStyles";
 
 const themeGlobal = {
   breakpoint_large: " 1920px",
@@ -41,21 +11,28 @@ const themeGlobal = {
   breakpoint_xsmall: "480px",
   white: "#ffffff",
   red: "#f94144",
-  black: "#000000",
+  black: "#333333",
   orange: "#f3722c",
   yellow: "#f9c74f",
   blue: "#277da1",
   green: "#aec62e",
+  size1: "8px",
+  size2: "12px",
+  size3: "16px",
+  size4: "24px",
+  size5: "36px",
+  size6: "54px",
+  size7: "72px",
 };
 
 const theme = {
   dark: {
-    background: "black",
-    color: "white",
+    background: (props) => props.theme.black,
+    color: (props) => props.theme.white,
   },
   light: {
-    background: "white",
-    color: "black",
+    background: (props) => props.theme.white,
+    color: (props) => props.theme.black,
   },
 };
 

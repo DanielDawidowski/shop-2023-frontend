@@ -13,12 +13,12 @@ export const HamburgerMenu = styled.div`
     z-index: 100;
     margin-right: -1rem;
     span {
-      width: 40px;
-      height: 12px;
+      width: 20px;
+      height: 4px;
       display: block;
-      background: ${(props) => props.theme.black};
+      background: ${(props) => props.theme.color};
       border-radius: 13px;
-      margin: 8px;
+      margin: 4px;
     }
   }
 `;

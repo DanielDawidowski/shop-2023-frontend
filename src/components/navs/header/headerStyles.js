@@ -1,18 +1,22 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const HeaderNav = styled(motion.header)`
-  height: 0px;
+export const HeaderStyles = styled(motion.header)`
+  margin: 0;
   width: 100%;
   color: ${(props) => props.theme.red};
-  li {
-    font-size: 1.5rem;
-    font-weight: 700;
-    a {
-      color: ${(props) => props.theme.red};
+  .header--inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header--genders {
+      display: flex;
+      .gender {
+        margin-right: ${(props) => props.theme.size1};
+      }
     }
   }
+
   @media (min-width: ${(props) => props.theme.breakpoint_small}) {
-    margin-top: 1rem;
   }
 `;

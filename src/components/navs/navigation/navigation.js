@@ -2,8 +2,9 @@ import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { NavStyles } from "./navigationStyles";
 import Hamburger from "../hamburger/hamburger";
+import Logo from "../../logo/logo";
 
-function Nav({ toggleMenu, setToggleMenu, toggleTheme }) {
+function Nav({ toggleMenu, setToggleMenu }) {
   return (
     <AnimatePresence>
       {toggleMenu && (
@@ -17,7 +18,7 @@ function Nav({ toggleMenu, setToggleMenu, toggleTheme }) {
               ease: [0.6, 0.05, -0.01, 0.9],
             }}
           >
-            <div onClick={toggleTheme}>CinemaApp</div>
+            <Logo />
             <Hamburger setToggleMenu={setToggleMenu} toggleMenu={toggleMenu} />
           </NavStyles>
         </>

@@ -8,6 +8,7 @@ const Hamburger = ({ toggleMenu, setToggleMenu }) => {
       <button onClick={() => setToggleMenu(!toggleMenu)} ref={hamburger}>
         <span></span>
         <span></span>
+        <span></span>
       </button>
     </HamburgerMenu>
   );

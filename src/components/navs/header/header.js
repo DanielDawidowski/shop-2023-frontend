@@ -1,73 +1,28 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import styled from "styled-components";
 import { Container } from "../../layout/layoutStyles";
-import Hamburger from "../hamburger/hamburger";
+import Logo from "../../logo/logo";
 import { HeaderStyles } from "./headerStyles";
+import GenderHeader from "./genderHeader";
+import SettingsHeader from "./settingsHeader";
 
-const Icon = styled.svg`
-  fill: ${(props) => props.theme.color};
-  :hover {
-    /* border-top: 1px solid ${(props) => props.theme.red};
-    border-right: 1px solid ${(props) => props.theme.red};
-    border-left: 1px solid ${(props) => props.theme.red}; */
-    border: 1px solid ${(props) => props.theme.red};
-  }
-`;
-
-function Header({ toggleMenu, setToggleMenu, toggleTheme }) {
-  let dispatch = useDispatch();
-
-  const setGender = (gender) => {
-    // add to reeux state
-    dispatch({
-      type: "GENDER",
-      payload: gender,
-    });
-  };
-
+function Header({ toggleTheme, currentTheme }) {
   return (
     <HeaderStyles>
       <Container>
         <div className="header--inner">
           <ul className="header--genders">
-            <li className="gender" onClick={() => setGender("men")}>
-              <h2>
-                <b>Men</b>
-              </h2>
-            </li>
-            <li className="gender" onClick={() => setGender("women")}>
-              <h2>
-                <b>Women</b>
-              </h2>
-            </li>
-            <li className="gender" onClick={() => setGender("kids")}>
-              <h2>
-                <b>Kids</b>
-              </h2>
-            </li>
+            <GenderHeader />
           </ul>
-          <div className="header--logo">SHOP</div>
+          <div className="header--logo">
+            <Logo />
+          </div>
           <div className="header--icons">
-            <Icon viewBox="-5.5 -5.5 28 28">
-              <path d="M11.47 2.18a6.49 6.49 0 0 1 3.22 5.5 6.84 6.84 0 0 1-7.08 6.55 7.42 7.42 0 0 1-3.82-1 7 7 0 0 1-1.9-1.65 9.47 9.47 0 0 0 3.34-.74 9.92 9.92 0 0 0 3.3-2.24 10 10 0 0 0 2.94-6.42M10.82.45a.66.66 0 0 0-.66.69 8.63 8.63 0 0 1-2.55 6.54 8.68 8.68 0 0 1-6.09 2.57H.66a.66.66 0 0 0-.58 1 8.45 8.45 0 0 0 7.53 4.39A8.15 8.15 0 0 0 16 7.68 7.85 7.85 0 0 0 11.07.51a.61.61 0 0 0-.25-.06z" />
-            </Icon>
-            <Icon viewBox="-5.5 0 32 32">
-              <path d="M10.68 21.64c-3.12 0-5.64-2.52-5.64-5.64s2.52-5.64 5.64-5.64 5.64 2.52 5.64 5.64-2.52 5.64-5.64 5.64zM10.68 12.040c-2.2 0-3.96 1.76-3.96 3.96s1.76 3.96 3.96 3.96 3.96-1.76 3.96-3.96-1.76-3.96-3.96-3.96zM10.68 9.040c-0.48 0-0.84-0.36-0.84-0.84v-2.040c0-0.48 0.36-0.84 0.84-0.84s0.84 0.36 0.84 0.84v2.040c0 0.48-0.36 0.84-0.84 0.84zM16.2 11.32c-0.2 0-0.44-0.080-0.6-0.24-0.32-0.32-0.32-0.84 0-1.2l1.44-1.44c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-1.44 1.44c-0.2 0.16-0.4 0.24-0.6 0.24zM18.48 16.84c-0.48 0-0.84-0.36-0.84-0.84s0.36-0.84 0.84-0.84h2.040c0.48 0 0.84 0.36 0.84 0.84s-0.36 0.84-0.84 0.84h-2.040zM17.64 23.8c-0.2 0-0.44-0.080-0.6-0.24l-1.44-1.48c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l1.44 1.44c0.32 0.32 0.32 0.84 0 1.2-0.16 0.2-0.4 0.28-0.6 0.28zM10.68 26.68c-0.48 0-0.84-0.36-0.84-0.84v-2.040c0-0.48 0.36-0.84 0.84-0.84s0.84 0.36 0.84 0.84v2.040c0 0.48-0.36 0.84-0.84 0.84zM3.72 23.8c-0.2 0-0.44-0.080-0.6-0.24-0.32-0.32-0.32-0.84 0-1.2l1.44-1.44c0.32-0.32 0.84-0.32 1.2 0s0.32 0.84 0 1.2l-1.44 1.44c-0.16 0.16-0.4 0.24-0.6 0.24zM0.84 16.84c-0.48 0-0.84-0.36-0.84-0.84s0.36-0.84 0.84-0.84h2.040c0.48 0 0.84 0.36 0.84 0.84s-0.36 0.84-0.84 0.84h-2.040zM5.16 11.32c-0.2 0-0.44-0.080-0.6-0.24l-1.44-1.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l1.44 1.44c0.32 0.32 0.32 0.84 0 1.2-0.16 0.16-0.36 0.24-0.6 0.24z" />
-            </Icon>
-            <Icon viewBox="-5.5 -5.5 28 28">
-              <path d="M8 7.83c-3.08 0-5.59 2.17-5.59 4.84V16h1.27v-3.33c0-2 1.94-3.57 4.32-3.57s4.32 1.6 4.32 3.57V16h1.27v-3.33c0-2.67-2.51-4.84-5.59-4.84zm.1-1.22a3.22 3.22 0 0 0 3.1-3.31A3.21 3.21 0 0 0 8.1 0 3.21 3.21 0 0 0 5 3.3a3.22 3.22 0 0 0 3.1 3.31zm0-5.32a1.92 1.92 0 0 1 1.81 2 1.93 1.93 0 0 1-1.81 2 1.93 1.93 0 0 1-1.8-2 1.92 1.92 0 0 1 1.8-2z" />
-            </Icon>
-            <Icon viewBox="-5.5 -5.5 28 28">
-              <path d="m14.91 13.09-3.68-3.21a4.86 4.86 0 0 0 .86-2.77A5.34 5.34 0 0 0 6.59 2a5.35 5.35 0 0 0-5.5 5.15 5.34 5.34 0 0 0 5.5 5.15 5.71 5.71 0 0 0 3.82-1.44L14.08 14zM6.59 11a4.09 4.09 0 0 1-4.25-3.9 4.09 4.09 0 0 1 4.25-3.9 4.09 4.09 0 0 1 4.25 3.9A4.08 4.08 0 0 1 6.59 11z" />
-            </Icon>
-            <Icon viewBox="-5.5 -5.5 28 28">
-              <path d="M14.37 2.56a3.92 3.92 0 0 0-3-1 4.1 4.1 0 0 0-1.82.52A9.18 9.18 0 0 0 8 3.06a9.35 9.35 0 0 0-1.49-1 3.85 3.85 0 0 0-1.77-.52A4.07 4.07 0 0 0 1.63 2.6 4 4 0 0 0 .35 5.52a3.83 3.83 0 0 0 .88 2.33 33.87 33.87 0 0 0 5.7 6.2l.39-.49-.38.49a1.67 1.67 0 0 0 1.06.42 1.71 1.71 0 0 0 1.08-.42 37.42 37.42 0 0 0 6.06-6.73 3.5 3.5 0 0 0 .47-1.74 4 4 0 0 0-1.24-3.02zm-.26 4.06a37.1 37.1 0 0 1-5.81 6.46.56.56 0 0 1-.28.13.51.51 0 0 1-.29-.14 32.77 32.77 0 0 1-5.49-5.94 2.74 2.74 0 0 1-.64-1.61 2.75 2.75 0 0 1 .88-2 2.79 2.79 0 0 1 2.16-.72h.1a2.73 2.73 0 0 1 1.19.38A10.23 10.23 0 0 1 7.24 4l.76.63.76-.63a9 9 0 0 1 1.34-.86 2.91 2.91 0 0 1 1.26-.39h.1a2.68 2.68 0 0 1 2.07.68 2.78 2.78 0 0 1 .87 2 2.18 2.18 0 0 1-.29 1.19z" />
-            </Icon>
-            <div onClick={toggleTheme}>Shop</div>
+            <SettingsHeader
+              toggleTheme={toggleTheme}
+              currentTheme={currentTheme}
+            />
           </div>
         </div>
-        <Hamburger setToggleMenu={setToggleMenu} toggleMenu={toggleMenu} />
       </Container>
     </HeaderStyles>
   );

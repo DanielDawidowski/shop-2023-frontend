@@ -62,7 +62,7 @@
   {
     "id": 7,
     "name": "Asics Shirt",
-    "category": "shirt",
+    "category": "shirts",
     "mark": "asics",
     "color": "white",
     "gender": "women",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "name": "Adidas Shirt",
-    "category": "shirt",
+    "category": "shirts",
     "mark": "adidas",
     "color": "black",
     "gender": "women",
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "name": "Nike Shirt",
-    "category": "shirt",
+    "category": "shirts",
     "mark": "nike",
     "color": "white",
     "gender": "women",
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "name": "Reebok Shirt",
-    "category": "shirt",
+    "category": "shirts",
     "mark": "reebok",
     "color": "black",
     "gender": "women",
@@ -101,8 +101,8 @@
   },
   {
     "id": 11,
-    "name": "Asics Pants",
-    "category": "pants",
+    "name": "Asics Trousers",
+    "category": "trousers",
     "mark": "asics",
     "color": "black",
     "gender": "women",
@@ -111,8 +111,8 @@
   },
   {
     "id": 12,
-    "name": "Adidas Pants",
-    "category": "pants",
+    "name": "Adidas Trousers",
+    "category": "trousers",
     "mark": "adidas",
     "color": "black",
     "gender": "women",
@@ -121,8 +121,8 @@
   },
   {
     "id": 13,
-    "name": "Nike Pants",
-    "category": "pants",
+    "name": "Nike Trousers",
+    "category": "trousers",
     "mark": "nike",
     "color": "black",
     "gender": "women",
@@ -131,8 +131,8 @@
   },
   {
     "id": 14,
-    "name": "Reebok Pants",
-    "category": "pants",
+    "name": "Reebok Trousers",
+    "category": "trousers",
     "mark": "reebok",
     "color": "black",
     "gender": "women",
@@ -142,7 +142,7 @@
   {
     "id": 15,
     "name": "Asics Dress",
-    "category": "dress",
+    "category": "dresses",
     "mark": "asics",
     "color": "black",
     "gender": "women",
@@ -152,7 +152,7 @@
   {
     "id": 16,
     "name": "Adidas Dress",
-    "category": "dress",
+    "category": "dresses",
     "mark": "adidas",
     "color": "black",
     "gender": "women",
@@ -162,7 +162,7 @@
   {
     "id": 17,
     "name": "Nike Dress",
-    "category": "dress",
+    "category": "dresses",
     "mark": "nike",
     "color": "black",
     "gender": "women",
@@ -172,7 +172,7 @@
   {
     "id": 18,
     "name": "Reebok Dress",
-    "category": "dress",
+    "category": "dresses",
     "mark": "reebok",
     "color": "black",
     "gender": "women",
@@ -182,7 +182,7 @@
   {
     "id": 19,
     "name": "Asics T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "asics",
     "color": "white",
     "gender": "men",
@@ -192,7 +192,7 @@
   {
     "id": 20,
     "name": "Adidas T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "adidas",
     "color": "grey",
     "gender": "men",
@@ -202,7 +202,7 @@
   {
     "id": 21,
     "name": "New Balance T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "new balance",
     "color": "red",
     "gender": "men",
@@ -212,7 +212,7 @@
   {
     "id": 22,
     "name": "Nike T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "nike",
     "color": "black",
     "gender": "men",
@@ -222,7 +222,7 @@
   {
     "id": 23,
     "name": "Reebok T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "reebok",
     "color": "grey",
     "gender": "men",
@@ -281,8 +281,8 @@
   },
   {
     "id": 29,
-    "name": "Asics Pants",
-    "category": "pants",
+    "name": "Asics Tants",
+    "category": "trousers",
     "mark": "asics",
     "color": "black",
     "gender": "men",
@@ -291,8 +291,8 @@
   },
   {
     "id": 30,
-    "name": "Adidas Pants",
-    "category": "pants",
+    "name": "Adidas Trousers",
+    "category": "trousers",
     "mark": "adidas",
     "color": "black",
     "gender": "men",
@@ -301,8 +301,8 @@
   },
   {
     "id": 31,
-    "name": "Nike Pants",
-    "category": "pants",
+    "name": "Nike Trousers",
+    "category": "trousers",
     "mark": "nike",
     "color": "black",
     "gender": "men",
@@ -311,8 +311,8 @@
   },
   {
     "id": 32,
-    "name": "Reebok Pants",
-    "category": "pants",
+    "name": "Reebok Trousers",
+    "category": "trousers",
     "mark": "reebok",
     "color": "white",
     "gender": "men",
@@ -322,7 +322,7 @@
   {
     "id": 33,
     "name": "Asics Hoodie",
-    "category": "hoodie",
+    "category": "hoodies",
     "mark": "asics",
     "color": "black",
     "gender": "men",
@@ -332,7 +332,7 @@
   {
     "id": 34,
     "name": "Adidas Hoodie",
-    "category": "hoodie",
+    "category": "hoodies",
     "mark": "adidas",
     "color": "white",
     "gender": "men",
@@ -342,7 +342,7 @@
   {
     "id": 35,
     "name": "New Balance Hoodie",
-    "category": "hoodie",
+    "category": "hoodies",
     "mark": "new balance",
     "color": "white",
     "gender": "men",
@@ -352,7 +352,7 @@
   {
     "id": 36,
     "name": "Nike Hoodie",
-    "category": "hoodie",
+    "category": "hoodies",
     "mark": "nike",
     "color": "grey",
     "gender": "men",
@@ -362,7 +362,7 @@
   {
     "id": 37,
     "name": "Reebok Hoodie",
-    "category": "hoodie",
+    "category": "hoodies",
     "mark": "reebok",
     "color": "grey",
     "gender": "men",
@@ -372,7 +372,7 @@
   {
     "id": 38,
     "name": "Adidas T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "adidas",
     "color": "grey",
     "gender": "kids",
@@ -382,7 +382,7 @@
   {
     "id": 39,
     "name": "Asics T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "asics",
     "color": "blue",
     "gender": "kids",
@@ -392,7 +392,7 @@
   {
     "id": 40,
     "name": "New Balance T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "new balance",
     "color": "black",
     "gender": "kids",
@@ -402,7 +402,7 @@
   {
     "id": 41,
     "name": "Nike T-shirt",
-    "category": "t-shirt",
+    "category": "t-shirts",
     "mark": "nike",
     "color": "black",
     "gender": "kids",
@@ -481,8 +481,8 @@
   },
   {
     "id": 49,
-    "name": "Nike Pants",
-    "category": "pants",
+    "name": "Nike Trousers",
+    "category": "trousers",
     "mark": "nike",
     "color": "black",
     "gender": "kids",
@@ -491,8 +491,8 @@
   },
   {
     "id": 50,
-    "name": "adidas Pants",
-    "category": "pants",
+    "name": "adidas Trousers",
+    "category": "trousers",
     "mark": "adidas",
     "color": "black",
     "gender": "kids",

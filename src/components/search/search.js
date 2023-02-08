@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 // import { useSelector, useDispatch } from "react-redux";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import data from "../../data.json";
+import { SearchStyles } from "./searchStyles";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -12,11 +14,12 @@ const Search = () => {
   // let {  category } = useSelector((state) => ({ ...state }));
 
   const setCategory = (category) => {
-    // add to reeux state
+    // add to redux state
     dispatch({
       type: "CATEGORY",
       payload: category,
     });
+    console.log("category", category);
   };
 
   const handleSearchTermChange = (event) => {
@@ -47,19 +50,13 @@ const Search = () => {
   });
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search products"
-        value={searchTerm}
-        onChange={handleSearchTermChange}
-      />
+    <SearchStyles>
       <select
         value={selectedCategory}
         onChange={handleCategoryChange}
         onClick={(e) => setCategory(e.target.value)}
       >
-        <option value="all">Filter By Category</option>
+        <option value="all">Category</option>
         <option value="shoes">Shoes</option>
         <option value="shirt">Shirts</option>
         <option value="pants">Pants</option>
@@ -67,6 +64,12 @@ const Search = () => {
         <option value="t-shirt">T-Shirts</option>
         <option value="hoodie">Hoods</option>
       </select>
+      <input
+        type="text"
+        placeholder="Search products"
+        value={searchTerm}
+        onChange={handleSearchTermChange}
+      />
       {/* <select value={selectedGender} onChange={handleGenderChange}>
         <option value="all">All genders</option>
         <option value="men">Men</option>
@@ -74,20 +77,25 @@ const Search = () => {
         <option value="kids">Kids</option>
       </select> */}
       <ul>
-        {filteredProducts.length !== 0 ? (
-          filteredProducts.slice(0, 2).map((product) => (
-            <li key={product.id}>
-              Name: {product.name} | Category: {product.category} | Gender:{" "}
-              {product.gender} | Price: ${product.price} | Color:{" "}
-              {product.color}
-              <img src={product.img} alt={product.name} />
-            </li>
-          ))
-        ) : (
-          <li>No products found</li>
-        )}
+        {searchTerm.length > 0 && filteredProducts.length !== 0
+          ? filteredProducts.slice(0, 5).map((product) => (
+              <Link to={`/product/${product.id}`} key={product.id}>
+                <li>
+                  <img src={product.img} alt={product.name} />
+                  <div>
+                    <h3>{product.name}</h3>
+                    <h4>{product.price} $</h4>
+                  </div>
+                </li>
+              </Link>
+            ))
+          : searchTerm.length !== 0 && (
+              <li>
+                <h3>No products found</h3>
+              </li>
+            )}
       </ul>
-    </div>
+    </SearchStyles>
   );
 };
 

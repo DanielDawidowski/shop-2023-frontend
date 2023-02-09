@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container } from "../../layout/layoutStyles";
 import Logo from "../../logo/logo";
 import { HeaderStyles } from "./headerStyles";
@@ -13,9 +14,11 @@ function Header({ toggleTheme, currentTheme }) {
           <ul className="header--genders">
             <GenderHeader />
           </ul>
-          <div className="header--logo">
-            <Logo />
-          </div>
+          <Link to="/">
+            <div className="header--logo">
+              <Logo />
+            </div>
+          </Link>
           <div className="header--icons">
             <SettingsHeader
               toggleTheme={toggleTheme}

@@ -4,21 +4,29 @@ import { motion } from "framer-motion";
 export const HeaderStyles = styled(motion.header)`
   margin: 0;
   padding: 0;
+  border-bottom: 1px solid ${(props) => props.theme.color};
+
+  @media (min-width: ${(props) => props.theme.breakpoint_small}) {
+    border-bottom: none;
+  }
+
   .header--inner {
     padding: ${(props) => props.theme.size1};
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid ${(props) => props.theme.color};
+
     @media (min-width: ${(props) => props.theme.breakpoint_small}) {
       padding: ${(props) => props.theme.size1} 0;
-      border-bottom: none;
     }
+
     .header--genders {
       display: flex;
+
       @media (max-width: ${(props) => props.theme.breakpoint_small}) {
         display: none;
       }
+
       .gender {
         :hover h2 {
           background: ${(props) => props.theme.grey};
@@ -29,6 +37,7 @@ export const HeaderStyles = styled(motion.header)`
         }
       }
     }
+
     .header--icons {
       display: flex;
     }
@@ -49,10 +58,11 @@ export const CategoryHeaderStyles = styled(motion.header)`
       justify-content: space-between;
     }
     .category__header--list {
-      display: flex;
       width: 100%;
+      display: none;
       @media (min-width: ${(props) => props.theme.breakpoint_small}) {
         padding: ${(props) => props.theme.size1};
+        display: flex;
       }
       li {
         padding-right: ${(props) => props.theme.size1};
@@ -60,18 +70,28 @@ export const CategoryHeaderStyles = styled(motion.header)`
     }
 
     .category__header--search {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-left: 1px solid ${(props) => props.theme.color};
+      display: none;
       @media (min-width: ${(props) => props.theme.breakpoint_small}) {
-        border-left: none;
         justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
       }
       & > * {
         padding: ${(props) => props.theme.size1};
+      }
+    }
+    .category__header--search.media--query {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: none;
+      justify-content: flex-end;
+      border-left: 1px solid ${(props) => props.theme.color};
+      @media (min-width: ${(props) => props.theme.breakpoint_small}) {
+        display: none;
       }
     }
   }

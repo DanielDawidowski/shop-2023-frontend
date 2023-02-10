@@ -24,8 +24,10 @@ const GenderHeader = () => {
           <li key={i} className="gender" onClick={() => setGender(gen)}>
             <h2
               style={{
-                background: gender === gen && "#333333",
+                background: gender === gen && "#f94144",
                 color: gender === gen && "#ffffff",
+                border: gender === gen && "1px solid #f94144",
+                borderRadius: gender === gen && "4px",
               }}
             >
               <b>{g}</b>

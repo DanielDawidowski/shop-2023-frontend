@@ -29,4 +29,9 @@ export const Icon = styled(motion.svg)`
       width: 25px;
       height: 25px;
     `}
+    ${(props) =>
+    props.red &&
+    css`
+      fill: ${(props) => props.theme.red};
+    `}
 `;

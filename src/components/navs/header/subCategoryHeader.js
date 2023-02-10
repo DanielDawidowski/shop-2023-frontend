@@ -13,12 +13,14 @@ function SubCategoryHeader({ isHovered, setHovered, subCategory }) {
         products[i].sub_category.charAt(0).toUpperCase() +
         products[i].sub_category.slice(1);
       if (
-        !subCategories.includes(subCat) &&
-        subCategory === products[i].category &&
-        gender === products[i].gender
+        (!subCategories.includes(subCat) &&
+          subCategory === products[i].category &&
+          gender === products[i].gender) ||
+        (!subCategories.includes(subCat) &&
+          subCategory === products[i].category &&
+          gender === "")
       ) {
         subCategories.push(subCat);
-        console.log(subCategory);
       }
     }
     return subCategories;

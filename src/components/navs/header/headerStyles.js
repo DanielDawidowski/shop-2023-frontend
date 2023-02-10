@@ -61,25 +61,37 @@ export const CategoryHeaderStyles = styled(motion.header)`
       width: 100%;
       display: none;
       @media (min-width: ${(props) => props.theme.breakpoint_small}) {
-        padding: ${(props) => props.theme.size1};
+        padding: 0 ${(props) => props.theme.size1};
         display: flex;
       }
       li {
-        padding-right: ${(props) => props.theme.size1};
+        :hover h3 {
+          background: ${(props) => props.theme.red};
+          color: ${(props) => props.theme.grey};
+          font-weight: 700;
+          border-radius: 4px 4px 0 0;
+        }
+        h3 {
+          padding: ${(props) => props.theme.size1};
+        }
       }
     }
 
     .category__header--search {
       display: none;
       @media (min-width: ${(props) => props.theme.breakpoint_small}) {
-        justify-content: flex-end;
         display: flex;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        justify-content: flex-end;
+        padding: 0 0 0 ${(props) => props.theme.size1};
+        border-radius: 4px;
       }
-      & > * {
-        padding: ${(props) => props.theme.size1};
+      svg {
+        padding: ${(props) => props.theme.size1} 0
+          ${(props) => props.theme.size1} ${(props) => props.theme.size1};
+      }
+      h3 {
+        font-weight: 700;
       }
     }
     .category__header--search.media--query {
@@ -92,6 +104,10 @@ export const CategoryHeaderStyles = styled(motion.header)`
       border-left: 1px solid ${(props) => props.theme.color};
       @media (min-width: ${(props) => props.theme.breakpoint_small}) {
         display: none;
+      }
+      h3 {
+        font-weight: 700;
+        color: ${(props) => props.theme.red};
       }
     }
   }

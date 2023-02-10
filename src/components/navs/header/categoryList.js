@@ -40,12 +40,12 @@ const CategoryList = ({ setHovered, setSubCategory }) => {
     setHovered(true);
     setSubCategory(e.target.innerText.toLowerCase());
 
-    // console.log("showNavigation", true);
+    // console.log("showNavigation", e.target.innerText.toLowerCase());
   };
 
   const closeNavigation = () => {
     setHovered(false);
-    setSubCategory("");
+    // setSubCategory("");
   };
 
   return (

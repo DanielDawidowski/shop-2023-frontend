@@ -1,9 +1,9 @@
 import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
-import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
+import Shop from "./pages/Shop/Shop";
 // import data from "./data.json";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <AnimatePresence mode="wait">
       <Switch key={location.pathname} location={location}>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/shop" component={Shop} />
         <Route exact path="/cart" component={Cart} />
       </Switch>
     </AnimatePresence>

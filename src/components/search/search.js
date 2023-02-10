@@ -42,7 +42,8 @@ const Search = () => {
     //   return false;
     // }
     return (
-      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        selectedCategory) ||
       product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
       product.mark.toLowerCase().includes(searchTerm.toLowerCase()) ||
       product.color.toLowerCase().includes(searchTerm.toLowerCase())
@@ -56,13 +57,13 @@ const Search = () => {
         onChange={handleCategoryChange}
         onClick={(e) => setCategory(e.target.value)}
       >
-        <option value="all">Category</option>
+        <option value="all">All</option>
         <option value="shoes">Shoes</option>
-        <option value="shirt">Shirts</option>
-        <option value="pants">Pants</option>
-        <option value="dress">Dresses</option>
-        <option value="t-shirt">T-Shirts</option>
-        <option value="hoodie">Hoods</option>
+        <option value="shirts">Shirts</option>
+        <option value="trousers">Trousers</option>
+        <option value="dresses">Dresses</option>
+        <option value="hoodies">Hoodies</option>
+        <option value="coats">Coats</option>
       </select>
       <input
         type="text"
@@ -70,31 +71,27 @@ const Search = () => {
         value={searchTerm}
         onChange={handleSearchTermChange}
       />
-      {/* <select value={selectedGender} onChange={handleGenderChange}>
-        <option value="all">All genders</option>
-        <option value="men">Men</option>
-        <option value="women">Women</option>
-        <option value="kids">Kids</option>
-      </select> */}
-      <ul>
-        {searchTerm.length > 0 && filteredProducts.length !== 0
-          ? filteredProducts.slice(0, 5).map((product) => (
-              <Link to={`/product/${product.id}`} key={product.id}>
+      <div className="search--list">
+        <ul>
+          {searchTerm.length > 0 && filteredProducts.length !== 0
+            ? filteredProducts.slice(0, 5).map((product) => (
+                <Link to={`/product/${product.id}`} key={product.id}>
+                  <li>
+                    <img src={product.img} alt={product.name} />
+                    <div>
+                      <h3>{product.name}</h3>
+                      <h4>{product.price} $</h4>
+                    </div>
+                  </li>
+                </Link>
+              ))
+            : searchTerm.length !== 0 && (
                 <li>
-                  <img src={product.img} alt={product.name} />
-                  <div>
-                    <h3>{product.name}</h3>
-                    <h4>{product.price} $</h4>
-                  </div>
+                  <h3>No products found</h3>
                 </li>
-              </Link>
-            ))
-          : searchTerm.length !== 0 && (
-              <li>
-                <h3>No products found</h3>
-              </li>
-            )}
-      </ul>
+              )}
+        </ul>
+      </div>
     </SearchStyles>
   );
 };

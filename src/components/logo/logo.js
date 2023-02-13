@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
 
 const LogoStyles = styled(motion.div)`
@@ -25,11 +25,7 @@ const Icon = styled.svg`
 `;
 
 const Logo = () => (
-  <LogoStyles
-    onPan={(e, pointInfo) => {
-      console.log(e, pointInfo);
-    }}
-  >
+  <LogoStyles>
     <Icon viewBox="0 -2 70 70">
       <path
         d="M28,13.49a6.14,6.14,0,0,1,7.17-4.14A5.93,5.93,0,0,1,39.92,14a5.49,5.49,0,0,1-.76,3.86,5.81,5.81,0,0,1-1.78,1.73l-4,2.63a0.38,0.38,0,0,0-.17.31v5.68"

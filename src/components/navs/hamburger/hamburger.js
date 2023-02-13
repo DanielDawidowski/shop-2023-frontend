@@ -1,16 +1,26 @@
-import React, { useRef } from "react";
-import { HamburgerMenu } from "./hamburgerStyles";
+import React from "react";
+import { HamburgerMenu, CloseMenu } from "./hamburgerStyles";
 
-const Hamburger = ({ toggleMenu, setToggleMenu }) => {
-  const hamburger = useRef(null);
+const Hamburger = ({ toggleMenu, setToggleMenu, close = false }) => {
   return (
-    <HamburgerMenu>
-      <button onClick={() => setToggleMenu(!toggleMenu)} ref={hamburger}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </HamburgerMenu>
+    <>
+      {close ? (
+        <CloseMenu>
+          <button onClick={() => setToggleMenu(!toggleMenu)}>
+            <span></span>
+            <span></span>
+          </button>
+        </CloseMenu>
+      ) : (
+        <HamburgerMenu>
+          <button onClick={() => setToggleMenu(!toggleMenu)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </HamburgerMenu>
+      )}
+    </>
   );
 };
 

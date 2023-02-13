@@ -31,3 +31,34 @@ export const HamburgerMenu = styled.div`
     }
   }
 `;
+
+export const CloseMenu = styled.div`
+  padding: ${(props) => props.theme.size1};
+
+  button {
+    border: none;
+    background: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    transform: rotate(45deg);
+    span {
+      width: 20px;
+      height: 4px;
+      display: block;
+      background: ${(props) => props.theme.color};
+      border-radius: 13px;
+
+      :nth-child(1) {
+        transform: rotate(90deg);
+        position: absolute;
+      }
+      :nth-child(2) {
+        transform: rotate(180deg);
+        position: absolute;
+      }
+    }
+  }
+`;

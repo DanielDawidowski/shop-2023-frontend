@@ -3,7 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import data from "../../../data.json";
 
-const CategoryList = ({ setHovered, setSubCategory }) => {
+const CategoryList = ({
+  setHovered,
+  setSubCategory,
+  setToggleDrawer,
+  nav = false,
+}) => {
   let { gender } = useSelector((state) => ({ ...state }));
 
   let dispatch = useDispatch();
@@ -39,8 +44,12 @@ const CategoryList = ({ setHovered, setSubCategory }) => {
   const showSubCategory = (e) => {
     setHovered(true);
     setSubCategory(e.target.innerText.toLowerCase());
-
     // console.log("showNavigation", e.target.innerText.toLowerCase());
+  };
+
+  const showDrawer = (e) => {
+    setToggleDrawer(true);
+    setCategory(e.target.innerText.toLowerCase());
   };
 
   const closeNavigation = () => {
@@ -50,16 +59,22 @@ const CategoryList = ({ setHovered, setSubCategory }) => {
 
   return (
     <>
-      {getCategories(data).map((category, index) => (
-        <motion.li
-          key={index}
-          onHoverStart={(e) => showSubCategory(e)}
-          onHoverEnd={() => closeNavigation()}
-          onClick={() => setCategory(category.toLowerCase())}
-        >
-          <h3>{category}</h3>
-        </motion.li>
-      ))}
+      {nav
+        ? getCategories(data).map((category, index) => (
+            <motion.li key={index} onClick={(e) => showDrawer(e)}>
+              <h3>{category}</h3>
+            </motion.li>
+          ))
+        : getCategories(data).map((category, index) => (
+            <motion.li
+              key={index}
+              onHoverStart={(e) => showSubCategory(e)}
+              onHoverEnd={() => closeNavigation()}
+              onClick={() => setCategory(category.toLowerCase())}
+            >
+              <h3>{category}</h3>
+            </motion.li>
+          ))}
     </>
   );
 };

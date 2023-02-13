@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { AnimatePresence, motion } from "framer-motion";
 import Header from "../navs/header/header";
 import CategoryHeader from "../navs/header/categoryHeader";
 import Nav from "../navs/navigation/navigation";
@@ -11,9 +10,11 @@ import Modal from "../modal/modal";
 import { LayoutStyles } from "./layoutStyles";
 import { theme, themeGlobal } from "./variables";
 import SubCategoryHeader from "../navs/header/subCategoryHeader";
+import Drawer from "../navs/drawer/drawer";
 
 const Layout = ({ children }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleDrawer, setToggleDrawer] = useState(false);
   const [currentTheme, setCurrentTheme] = useState("light");
   const [showModal, setShowModal] = useState(false);
   const [isHovered, setHovered] = useState(false);
@@ -48,7 +49,13 @@ const Layout = ({ children }) => {
           <Nav
             toggleMenu={toggleMenu}
             setToggleMenu={setToggleMenu}
-            toggleTheme={toggleTheme}
+            setToggleDrawer={setToggleDrawer}
+          />
+          <Drawer
+            toggleDrawer={toggleDrawer}
+            setToggleMenu={setToggleMenu}
+            setToggleDrawer={setToggleDrawer}
+            toggleMenu={toggleMenu}
           />
           <main>{children}</main>
         </LayoutStyles>

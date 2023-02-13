@@ -61,10 +61,11 @@ export const CategoryHeaderStyles = styled(motion.header)`
       width: 100%;
       display: none;
       @media (min-width: ${(props) => props.theme.breakpoint_small}) {
-        padding: 0 ${(props) => props.theme.size1};
+        padding: 0;
         display: flex;
       }
       li {
+        margin-right: ${(props) => props.theme.size1};
         :hover h3 {
           background: ${(props) => props.theme.red};
           color: ${(props) => props.theme.grey};

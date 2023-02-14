@@ -8,6 +8,7 @@
     "color": "white",
     "gender": "women",
     "price": 99.99,
+    "size": 38,
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/7p4H974/adidas-shoes-women.webp"
   },
@@ -20,6 +21,7 @@
     "color": "white",
     "gender": "women",
     "price": 49.99,
+    "size": 41,
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/fFWtyC1/asics-shoes-women.webp"
   },
@@ -32,6 +34,7 @@
     "color": "grey",
     "gender": "women",
     "price": 39.99,
+    "size": 43,
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/mB58QSm/nb-shoes-women.webp"
   },
@@ -44,6 +47,7 @@
     "color": "grey",
     "gender": "women",
     "price": 119.99,
+    "size": 40,
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/3sxnMM2/nike-shoes-women.webp"
   },
@@ -56,6 +60,7 @@
     "color": "grey",
     "gender": "women",
     "price": 119.99,
+    "size": 39,
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/4jtkVC6/reebok-shoes-outdoor-women.webp"
   },
@@ -68,6 +73,7 @@
     "color": "white",
     "gender": "women",
     "price": 129.99,
+    "size": 38,
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/QCnb83p/salomon-shoes-women.webp"
   },
@@ -92,6 +98,7 @@
     "color": "black",
     "gender": "women",
     "price": 24.99,
+    "size": "S",
     "icon": "https://i.ibb.co/MR4FgBx/shirts-tunic.png",
     "img": "https://i.ibb.co/stfkTfp/adidas-shirt-women.webp"
   },
@@ -104,6 +111,7 @@
     "color": "white",
     "gender": "women",
     "price": 24.99,
+    "size": "L",
     "icon": "https://i.ibb.co/MR4FgBx/shirts-tunic.png",
     "img": "https://i.ibb.co/X4xKB7r/nike-shirt-women.webp"
   },
@@ -116,6 +124,7 @@
     "color": "black",
     "gender": "women",
     "price": 14.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/qJN4PJb/shirts-blouse.png",
     "img": "https://i.ibb.co/GFv5JG3/reebok-shirt-women.webp"
   },
@@ -128,6 +137,7 @@
     "color": "black",
     "gender": "women",
     "price": 14.99,
+    "size": "M",
     "icon": "https://i.ibb.co/DrTM9RH/trousers-slacks.png",
     "img": "https://i.ibb.co/b2rmwm5/asics-pants-women.webp"
   },
@@ -140,6 +150,7 @@
     "color": "black",
     "gender": "women",
     "price": 19.99,
+    "size": "L",
     "icon": "https://i.ibb.co/DrTM9RH/trousers-slacks.png",
     "img": "https://i.ibb.co/K2pG19J/adidas-pants-women.webp"
   },
@@ -152,6 +163,7 @@
     "color": "black",
     "gender": "women",
     "price": 29.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/4PfxHw3/trousers-outdoor.png",
     "img": "https://i.ibb.co/4KhnpLF/nike-pants-women.webp"
   },
@@ -164,6 +176,7 @@
     "color": "black",
     "gender": "women",
     "price": 39.99,
+    "size": "S",
     "icon": "https://i.ibb.co/W2qQxvd/trousers-sport.png",
     "img": "https://i.ibb.co/hZYBBfY/reebok-pants-women.webp"
   },
@@ -176,6 +189,7 @@
     "color": "black",
     "gender": "women",
     "price": 49.99,
+    "size": "M",
     "icon": "https://i.ibb.co/y5JVBMX/dresses-evening.png",
     "img": "https://i.ibb.co/WcTF4nZ/asics-dress-women.webp"
   },
@@ -188,6 +202,7 @@
     "color": "black",
     "gender": "women",
     "price": 29.99,
+    "size": "S",
     "icon": "https://i.ibb.co/nmSRbNH/dresses-shirt.png",
     "img": "https://i.ibb.co/7vP4W9k/adidas-dress-women.webp"
   },
@@ -200,6 +215,7 @@
     "color": "black",
     "gender": "women",
     "price": 89.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/nmSRbNH/dresses-shirt.png",
     "img": "https://i.ibb.co/92qmjsF/nike-dress-women.webp"
   },
@@ -212,6 +228,7 @@
     "color": "black",
     "gender": "women",
     "price": 69.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/yQ7qFnQ/dresses-casual.png",
     "img": "https://i.ibb.co/VT25JXt/reebok-dress-women.webp"
   },
@@ -224,6 +241,7 @@
     "color": "white",
     "gender": "men",
     "price": 9.99,
+    "size": "S",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/WzP1T42/asics-t-shirt-men.webp"
   },
@@ -236,6 +254,7 @@
     "color": "grey",
     "gender": "men",
     "price": 24.99,
+    "size": "M",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/VLK7Yxt/adidas-t-shirt-men.webp"
   },
@@ -248,6 +267,7 @@
     "color": "red",
     "gender": "men",
     "price": 9.99,
+    "size": "M",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/YWwsRFw/nb-t-shirt-men.webp"
   },
@@ -260,6 +280,7 @@
     "color": "black",
     "gender": "men",
     "price": 25.99,
+    "size": "M",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/MCdqSfL/nike-t-shirt-men.webp"
   },
@@ -272,6 +293,7 @@
     "color": "grey",
     "gender": "men",
     "price": 14.99,
+    "size": "S",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/mNX3cZ0/reebok-t-shirt-men.webp"
   },
@@ -284,6 +306,7 @@
     "color": "grey",
     "gender": "men",
     "price": 44.99,
+    "size": 43,
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/qNxLLdt/asics-shoes-men.webp"
   },
@@ -296,6 +319,7 @@
     "color": "white",
     "gender": "men",
     "price": 99.99,
+    "size": 40,
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/Ph8r7kj/adidas-shoes-men.webp"
   },
@@ -308,6 +332,7 @@
     "color": "white",
     "gender": "men",
     "price": 39.99,
+    "size": 38,
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/tpq5y81/nb-shoes-men.webp"
   },
@@ -320,6 +345,7 @@
     "color": "black",
     "gender": "men",
     "price": 29.99,
+    "size": 38,
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/FXHvVVY/reebok-shoes-men.webp"
   },
@@ -332,6 +358,7 @@
     "color": "white",
     "gender": "men",
     "price": 129.99,
+    "size": 39,
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/yBKK0C4/salomon-shoes-men.webp"
   },
@@ -344,6 +371,7 @@
     "color": "black",
     "gender": "men",
     "price": 29.99,
+    "size": "L",
     "icon": "https://i.ibb.co/4PfxHw3/trousers-outdoor.png",
     "img": "https://i.ibb.co/QNKJbGh/asics-pants-men.webp"
   },
@@ -356,6 +384,7 @@
     "color": "black",
     "gender": "men",
     "price": 39.99,
+    "size": "L",
     "icon": "https://i.ibb.co/W2qQxvd/trousers-sport.png",
     "img": "https://i.ibb.co/JpGWdPC/adidas-pants-men.webp"
   },
@@ -368,6 +397,7 @@
     "color": "black",
     "gender": "men",
     "price": 39.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/W2qQxvd/trousers-sport.png",
     "img": "https://i.ibb.co/7XYLsyZ/nike-pants-men.webp"
   },
@@ -380,6 +410,7 @@
     "color": "white",
     "gender": "men",
     "price": 29.99,
+    "size": "L",
     "icon": "https://i.ibb.co/W2qQxvd/trousers-sport.png",
     "img": "https://i.ibb.co/LS5rCPD/reebok-pants-men.webp"
   },
@@ -392,6 +423,7 @@
     "color": "black",
     "gender": "men",
     "price": 24.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/qR9VLz7/hoodies-hoodie.png",
     "img": "https://i.ibb.co/qJq9x4R/asics-hoodie-men.webp"
   },
@@ -404,6 +436,7 @@
     "color": "white",
     "gender": "men",
     "price": 34.99,
+    "size": "XXL",
     "icon": "https://i.ibb.co/p1yVBtx/hoodies-pullover.png",
     "img": "https://i.ibb.co/pbn73kf/adidas-hoodie-men.webp"
   },
@@ -416,6 +449,7 @@
     "color": "white",
     "gender": "men",
     "price": 19.99,
+    "size": "XXL",
     "icon": "https://i.ibb.co/p1yVBtx/hoodies-pullover.png",
     "img": "https://i.ibb.co/WHrxKG3/nb-hoodie-men.webp"
   },
@@ -428,6 +462,7 @@
     "color": "grey",
     "gender": "men",
     "price": 49.99,
+    "size": "XXL",
     "icon": "https://i.ibb.co/D1x72wq/hoodies-sweatshirt.png",
     "img": "https://i.ibb.co/GQ6P6KV/nike-hoodie-men.webp"
   },
@@ -440,6 +475,7 @@
     "color": "grey",
     "gender": "men",
     "price": 29.99,
+    "size": "L",
     "icon": "https://i.ibb.co/qR9VLz7/hoodies-hoodie.png",
     "img": "https://i.ibb.co/BZCN9y3/reebok-hoodie-men.webp"
   },
@@ -452,6 +488,7 @@
     "color": "grey",
     "gender": "kids",
     "price": 9.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/Sm6N3rJ/adidas-t-shirt-kids.webp"
   },
@@ -464,6 +501,7 @@
     "color": "blue",
     "gender": "kids",
     "price": 9.99,
+    "size": "S",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/MkkFZjm/asics-t-shirt-kids.webp"
   },
@@ -476,6 +514,7 @@
     "color": "black",
     "gender": "kids",
     "price": 9.99,
+    "size": "M",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/JC5Nc5x/nb-t-shirt-kids.webp"
   },
@@ -488,6 +527,7 @@
     "color": "black",
     "gender": "kids",
     "price": 9.99,
+    "size": "L",
     "icon": "https://i.ibb.co/WpYpwDm/shirts-t-shirt.png",
     "img": "https://i.ibb.co/k8DgjDt/nike-t-shirt-kids.webp"
   },
@@ -500,6 +540,7 @@
     "color": "black",
     "gender": "kids",
     "price": 19.99,
+    "size": 41,
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/WW5PpYM/asics-shoes-kids.webp"
   },
@@ -512,6 +553,7 @@
     "color": "black",
     "gender": "kids",
     "price": 29.99,
+    "size": 42,
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/WW5PpYM/asics-shoes-kids.webp"
   },
@@ -524,6 +566,7 @@
     "color": "white",
     "gender": "kids",
     "price": 24.99,
+    "size": 42,
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/df2Qjcq/adidas-shoes-kids.webp"
   },
@@ -536,6 +579,7 @@
     "color": "white",
     "gender": "kids",
     "price": 29.99,
+    "size": 39,
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/NZPxRw5/nb-shoes-kids.webp"
   },
@@ -548,6 +592,7 @@
     "color": "white",
     "gender": "kids",
     "price": 29.99,
+    "size": 38,
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/ZVTZfvy/nike-shoes-kids.webp"
   },
@@ -560,6 +605,7 @@
     "color": "white",
     "gender": "kids",
     "price": 24.99,
+    "size": 38,
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/b620Yg6/reebok-shoes-kids.webp"
   },
@@ -572,6 +618,7 @@
     "color": "black",
     "gender": "kids",
     "price": 49.99,
+    "size": 38,
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/n1Vk8LS/salomon-shoes-kids.webp"
   },
@@ -584,6 +631,7 @@
     "color": "black",
     "gender": "kids",
     "price": 34.99,
+    "size": "S",
     "icon": "https://i.ibb.co/W2qQxvd/trousers-sport.png",
     "img": "https://i.ibb.co/f9gNZwt/nike-pants-kids.webp"
   },
@@ -596,6 +644,7 @@
     "color": "black",
     "gender": "kids",
     "price": 34.99,
+    "size": "M",
     "icon": "https://i.ibb.co/W2qQxvd/trousers-sport.png",
     "img": "https://i.ibb.co/3pCCK1D/adidas-pants-kids.webp"
   },
@@ -608,6 +657,7 @@
     "color": "green",
     "gender": "women",
     "price": 134.99,
+    "size": "M",
     "icon": "https://i.ibb.co/Jsm2vsG/coats-winter.png",
     "img": "https://i.ibb.co/VqCQsCm/adidas-coat-winter-winter.webp"
   },
@@ -620,6 +670,7 @@
     "color": "brown",
     "gender": "women",
     "price": 124.99,
+    "size": "L",
     "icon": "https://i.ibb.co/Jsm2vsG/coats-winter.png",
     "img": "https://i.ibb.co/2K3dK50/asics-coat-winter-women.webp"
   },
@@ -632,6 +683,7 @@
     "color": "brown",
     "gender": "women",
     "price": 99.99,
+    "size": "S",
     "icon": "https://i.ibb.co/88fjk4R/coats-short.png",
     "img": "https://i.ibb.co/p20ZJtF/boss-coat-short-women.webp"
   },
@@ -644,6 +696,7 @@
     "color": "blue",
     "gender": "women",
     "price": 159.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/xfDcPxP/coats-classic.png",
     "img": "https://i.ibb.co/NmHRkpC/esprit-coat-classic-women.webp"
   },
@@ -656,6 +709,7 @@
     "color": "blue",
     "gender": "women",
     "price": 69.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/xfDcPxP/coats-classic.png",
     "img": "https://i.ibb.co/NmHRkpC/esprit-coat-classic-women.webp"
   },
@@ -668,6 +722,7 @@
     "color": "white",
     "gender": "women",
     "price": 79.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/88fjk4R/coats-short.png",
     "img": "https://i.ibb.co/80BMJ7S/esprit-coat-short-women.webp"
   },
@@ -680,6 +735,7 @@
     "color": "black",
     "gender": "women",
     "price": 129.99,
+    "size": "L",
     "icon": "https://i.ibb.co/xfDcPxP/coats-classic.png",
     "img": "https://i.ibb.co/wKLMM95/mango-coat-classic-women.webp"
   },
@@ -692,6 +748,7 @@
     "color": "black",
     "gender": "women",
     "price": 99.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/4K3pj4M/dresses-occasion.png",
     "img": "https://i.ibb.co/9vXZJZs/boss-dress-occasion-women.webp"
   },
@@ -704,6 +761,7 @@
     "color": "purple",
     "gender": "women",
     "price": 129.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/4K3pj4M/dresses-occasion.png",
     "img": "https://i.ibb.co/9vXZJZs/boss-dress-occasion-women.webp"
   },
@@ -716,6 +774,7 @@
     "color": "purple",
     "gender": "women",
     "price": 89.99,
+    "size": "L",
     "icon": "https://i.ibb.co/4K3pj4M/dresses-occasion.png",
     "img": "https://i.ibb.co/9vXZJZs/boss-dress-occasion-women.webp"
   },
@@ -728,6 +787,7 @@
     "color": "brown",
     "gender": "women",
     "price": 69.99,
+    "size": "S",
     "icon": "https://i.ibb.co/yQ7qFnQ/dresses-casual.png",
     "img": "https://i.ibb.co/cxXx7Fk/next-dress-casual-women.webp"
   },
@@ -740,6 +800,7 @@
     "color": "green",
     "gender": "women",
     "price": 119.99,
+    "size": "M",
     "icon": "https://i.ibb.co/4K3pj4M/dresses-occasion.png",
     "img": "https://i.ibb.co/d2Ybtzp/next-dress-occasion-women.webp"
   },
@@ -752,6 +813,7 @@
     "color": "white",
     "gender": "women",
     "price": 49.99,
+    "size": "L",
     "icon": "https://i.ibb.co/fppCy89/shirts-shirt.png",
     "img": "https://i.ibb.co/2NPpkSc/boss-shirt-shirt-women.webp"
   },
@@ -764,6 +826,7 @@
     "color": "blue",
     "gender": "women",
     "price": 29.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/fppCy89/shirts-shirt.png",
     "img": "https://i.ibb.co/XtfqKBL/sublevel-shirt-shirt-women.webp"
   },
@@ -776,6 +839,7 @@
     "color": "brown",
     "gender": "women",
     "price": 39.99,
+    "size": 41,
     "icon": "https://i.ibb.co/LNrdK7Y/shoes-high-heels.png",
     "img": "https://i.ibb.co/T027mcR/boss-shoes-high-women.webp"
   },
@@ -788,6 +852,7 @@
     "color": "pink",
     "gender": "women",
     "price": 19.99,
+    "size": 42,
     "icon": "https://i.ibb.co/58xCBnQ/shoes-sandal.png",
     "img": "https://i.ibb.co/4RFzgVs/ecco-shoes-sandals-women.webp"
   },
@@ -800,6 +865,7 @@
     "color": "black",
     "gender": "women",
     "price": 29.99,
+    "size": 43,
     "icon": "https://i.ibb.co/KjQ38bX/trousers-chinos.png",
     "img": "https://i.ibb.co/FKmfGbW/boss-trousers-chinos-women.webp"
   },
@@ -812,6 +878,7 @@
     "color": "green",
     "gender": "women",
     "price": 39.99,
+    "size": "M",
     "icon": "https://i.ibb.co/R6rvvc5/trousers-leggings.png",
     "img": "https://i.ibb.co/FXqFP3H/de-Facto-trousers-leggins-women.webp"
   },
@@ -824,6 +891,7 @@
     "color": "green",
     "gender": "women",
     "price": 14.99,
+    "size": "L",
     "icon": "https://i.ibb.co/R6rvvc5/trousers-leggings.png",
     "img": "https://i.ibb.co/7pJVH3h/nb-trousers-leggins-women.webp"
   },
@@ -836,6 +904,7 @@
     "color": "white",
     "gender": "women",
     "price": 24.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/KjQ38bX/trousers-chinos.png",
     "img": "https://i.ibb.co/GvL9jcb/urban-trousers-chinos-women.webp"
   },
@@ -848,6 +917,7 @@
     "color": "black",
     "gender": "men",
     "price": 34.99,
+    "size": "L",
     "icon": "https://i.ibb.co/D1x72wq/hoodies-sweatshirt.png",
     "img": "https://i.ibb.co/MBfXcC4/denim-hoodie-shirt-men.webp"
   },
@@ -860,6 +930,7 @@
     "color": "blue",
     "gender": "men",
     "price": 44.99,
+    "size": "S",
     "icon": "https://i.ibb.co/HgyBSfv/shirts-business.png",
     "img": "https://i.ibb.co/BZfSxt5/boss-shirt-business-men.webp"
   },
@@ -872,6 +943,7 @@
     "color": "black",
     "gender": "men",
     "price": 54.99,
+    "size": "L",
     "icon": "https://i.ibb.co/GT2T1X4/shirts-long.png",
     "img": "https://i.ibb.co/fS6nkmM/boss-shirt-long-men.webp"
   },
@@ -884,6 +956,7 @@
     "color": "black",
     "gender": "men",
     "price": 44.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/GT2T1X4/shirts-long.png",
     "img": "https://i.ibb.co/bvQ1Zsc/c-a-shirt-long-men.webp"
   },
@@ -896,6 +969,7 @@
     "color": "white",
     "gender": "men",
     "price": 44.99,
+    "size": "XXL",
     "icon": "https://i.ibb.co/ZN2W7Qt/shirts-polo.png",
     "img": "https://i.ibb.co/mhqV0dQ/de-Facto-shirt-polo-men.webp"
   },
@@ -908,6 +982,7 @@
     "color": "white",
     "gender": "men",
     "price": 44.99,
+    "size": "M",
     "icon": "https://i.ibb.co/HgyBSfv/shirts-business.png",
     "img": "https://i.ibb.co/8dJ38CL/denim-shirt-business-men.webp"
   },
@@ -920,6 +995,7 @@
     "color": "brown",
     "gender": "men",
     "price": 24.99,
+    "size": "L",
     "icon": "https://i.ibb.co/ZN2W7Qt/shirts-polo.png",
     "img": "https://i.ibb.co/xjP6DRF/kappa-shirt-polo-men.webp"
   },
@@ -932,6 +1008,7 @@
     "color": "brown",
     "gender": "men",
     "price": 24.99,
+    "size": 42,
     "icon": "https://i.ibb.co/58xCBnQ/shoes-sandal.png",
     "img": "https://i.ibb.co/51Wc2fX/adidas-shoes-sandals-men.webp"
   },
@@ -944,6 +1021,7 @@
     "color": "brown",
     "gender": "men",
     "price": 74.99,
+    "size": 43,
     "icon": "https://i.ibb.co/3MvnQzR/shoes-business.png",
     "img": "https://i.ibb.co/v1gGVSN/bugatti-shoes-business-men.webp"
   },
@@ -956,6 +1034,7 @@
     "color": "white",
     "gender": "men",
     "price": 44.99,
+    "size": 39,
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/hcnnj32/nike-shoes-seakers-men.webp"
   },
@@ -968,6 +1047,7 @@
     "color": "black",
     "gender": "men",
     "price": 84.99,
+    "size": 42,
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/CbYTW5N/nike-shoes-sport-men.webp"
   },
@@ -980,6 +1060,7 @@
     "color": "white",
     "gender": "men",
     "price": 44.99,
+    "size": "S",
     "icon": "https://i.ibb.co/KjQ38bX/trousers-chinos.png",
     "img": "https://i.ibb.co/2SWyryn/c-a-trousers-chinos-men.webp"
   },
@@ -992,6 +1073,7 @@
     "color": "green",
     "gender": "men",
     "price": 54.99,
+    "size": "M",
     "icon": "https://i.ibb.co/dWwtM0z/trousers-cargo.png",
     "img": "https://i.ibb.co/j3sKwS3/denim-trousers-cargo-men.webp"
   },
@@ -1004,6 +1086,7 @@
     "color": "blue",
     "gender": "men",
     "price": 114.99,
+    "size": "L",
     "icon": "https://i.ibb.co/CVPK0Xq/trousers-dungarees.png",
     "img": "https://i.ibb.co/sKG9N6J/denim-trousers-dungarees-men.webp"
   },
@@ -1016,6 +1099,7 @@
     "color": "grey",
     "gender": "men",
     "price": 44.99,
+    "size": "M",
     "icon": "https://i.ibb.co/dWwtM0z/trousers-cargo.png",
     "img": "https://i.ibb.co/XzTXyYH/next-trousers-cargo-men.webp"
   },
@@ -1028,6 +1112,7 @@
     "color": "blue",
     "gender": "men",
     "price": 74.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/KjQ38bX/trousers-chinos.png",
     "img": "https://i.ibb.co/93y5n5Z/next-trousers-chinos-men.webp"
   },
@@ -1040,6 +1125,7 @@
     "color": "blue",
     "gender": "men",
     "price": 124.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/CVPK0Xq/trousers-dungarees.png",
     "img": "https://i.ibb.co/yXg3QtL/next-trousers-dungarees-men.webp"
   },
@@ -1052,6 +1138,7 @@
     "color": "blue",
     "gender": "kids",
     "price": 54.99,
+    "size": "XXL",
     "icon": "https://i.ibb.co/Jsm2vsG/coats-winter.png",
     "img": "https://i.ibb.co/PtSFg3Q/boss-coat-winter-kids.webp"
   },
@@ -1064,6 +1151,7 @@
     "color": "white",
     "gender": "kids",
     "price": 24.99,
+    "size": "XXL",
     "icon": "https://i.ibb.co/Jsm2vsG/coats-winter.png",
     "img": "https://i.ibb.co/GnnB9xm/c-a-coat-winter-kids.webp"
   },
@@ -1076,6 +1164,7 @@
     "color": "black",
     "gender": "kids",
     "price": 29.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/xfDcPxP/coats-classic.png",
     "img": "https://i.ibb.co/y0PX1Qk/mango-coat-classic-kids.webp"
   },
@@ -1088,6 +1177,7 @@
     "color": "pink",
     "gender": "kids",
     "price": 39.99,
+    "size": "L",
     "icon": "https://i.ibb.co/xfDcPxP/coats-classic.png",
     "img": "https://i.ibb.co/JxnkMjx/next-coat-classic-kids.webp"
   },
@@ -1100,6 +1190,7 @@
     "color": "black",
     "gender": "kids",
     "price": 9.99,
+    "size": "M",
     "icon": "https://i.ibb.co/ZN2W7Qt/shirts-polo.png",
     "img": "https://i.ibb.co/T0hpp7P/adidas-shirt-polo-kids.webp"
   },
@@ -1112,6 +1203,7 @@
     "color": "white",
     "gender": "kids",
     "price": 9.99,
+    "size": "S",
     "icon": "https://i.ibb.co/fppCy89/shirts-shirt.png",
     "img": "https://i.ibb.co/7zvnpCN/boss-shirt-shirt-kids.webp"
   },
@@ -1124,6 +1216,7 @@
     "color": "black",
     "gender": "kids",
     "price": 9.99,
+    "size": "M",
     "icon": "https://i.ibb.co/GT2T1X4/shirts-long.png",
     "img": "https://i.ibb.co/SQMPcmn/c-a-shirt-long-kids.webp"
   },
@@ -1136,6 +1229,7 @@
     "color": "white",
     "gender": "kids",
     "price": 9.99,
+    "size": "L",
     "icon": "https://i.ibb.co/ZN2W7Qt/shirts-polo.png",
     "img": "https://i.ibb.co/1byGR9S/c-a-shirt-polo-kids.webp"
   },
@@ -1148,6 +1242,7 @@
     "color": "grey",
     "gender": "kids",
     "price": 9.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/GT2T1X4/shirts-long.png",
     "img": "https://i.ibb.co/vY4Zw0N/c-a-shirt-shirt-kids.webp"
   },
@@ -1160,6 +1255,7 @@
     "color": "blue",
     "gender": "kids",
     "price": 19.99,
+    "size": "S",
     "icon": "https://i.ibb.co/ZN2W7Qt/shirts-polo.png",
     "img": "https://i.ibb.co/bzHv4cs/nike-shirt-polo-kids.webp"
   },
@@ -1172,6 +1268,7 @@
     "color": "black",
     "gender": "kids",
     "price": 29.99,
+    "size": 41,
     "icon": "https://i.ibb.co/58xCBnQ/shoes-sandal.png",
     "img": "https://i.ibb.co/B4xZkdS/nike-shoes-sandals-kids.webp"
   },
@@ -1184,6 +1281,7 @@
     "color": "white",
     "gender": "kids",
     "price": 14.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/R6rvvc5/trousers-leggings.png",
     "img": "https://i.ibb.co/GcfVcjF/asics-trousers-leggins-kids.webp"
   },
@@ -1196,6 +1294,7 @@
     "color": "blue",
     "gender": "kids",
     "price": 19.99,
+    "size": "L",
     "icon": "https://i.ibb.co/KjQ38bX/trousers-chinos.png",
     "img": "https://i.ibb.co/6N4Ccjy/boss-trousers-chinos-kids.webp"
   },
@@ -1208,6 +1307,7 @@
     "color": "white",
     "gender": "kids",
     "price": 19.99,
+    "size": "L",
     "icon": "https://i.ibb.co/KjQ38bX/trousers-chinos.png",
     "img": "https://i.ibb.co/JdvmxcH/c-a-trousers-chinos-kids.webp"
   },
@@ -1220,6 +1320,7 @@
     "color": "grey",
     "gender": "kids",
     "price": 12.99,
+    "size": "M",
     "icon": "https://i.ibb.co/DrTM9RH/trousers-slacks.png",
     "img": "https://i.ibb.co/c8hsJq3/c-a-trousers-slacks-kids.webp"
   },
@@ -1232,6 +1333,7 @@
     "color": "blue",
     "gender": "kids",
     "price": 12.99,
+    "size": "S",
     "icon": "https://i.ibb.co/W2qQxvd/trousers-sport.png",
     "img": "https://i.ibb.co/FHX3pZk/c-a-trousers-sport-kids.webp"
   },
@@ -1244,6 +1346,7 @@
     "color": "brown",
     "gender": "men",
     "price": 199.99,
+    "size": "M",
     "icon": "https://i.ibb.co/xfDcPxP/coats-classic.png",
     "img": "https://i.ibb.co/9n3QSmk/boss-coat-classic-men.webp"
   },
@@ -1256,6 +1359,7 @@
     "color": "blue",
     "gender": "men",
     "price": 179.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/88fjk4R/coats-short.png",
     "img": "https://i.ibb.co/nm8SSv4/denim-coat-short-men.webp"
   },
@@ -1268,6 +1372,7 @@
     "color": "green",
     "gender": "men",
     "price": 129.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/xfDcPxP/coats-classic.png",
     "img": "https://i.ibb.co/sjxwb3k/esprit-coat-classic-men.webp"
   },
@@ -1280,6 +1385,7 @@
     "color": "black",
     "gender": "men",
     "price": 99.99,
+    "size": "XXL",
     "icon": "https://i.ibb.co/Jsm2vsG/coats-winter.png",
     "img": "https://i.ibb.co/dMC5kcf/esprit-coat-winter-men.webp"
   },
@@ -1292,6 +1398,7 @@
     "color": "brown",
     "gender": "men",
     "price": 149.99,
+    "size": "L",
     "icon": "https://i.ibb.co/88fjk4R/coats-short.png",
     "img": "https://i.ibb.co/5ndgHfZ/next-coat-short-men.webp"
   },
@@ -1304,6 +1411,7 @@
     "color": "black",
     "gender": "men",
     "price": 149.99,
+    "size": "XL",
     "icon": "https://i.ibb.co/Jsm2vsG/coats-winter.png",
     "img": "https://i.ibb.co/H2XbXmn/next-coat-winter-men.webp"
   }

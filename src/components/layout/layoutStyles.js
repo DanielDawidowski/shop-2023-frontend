@@ -10,6 +10,7 @@ export const LayoutStyles = styled(motion.div)`
     width: 100%;
     background: ${(props) => props.theme.green};
     border-bottom: 1px solid ${(props) => props.theme.color};
+    z-index: 999;
     &--inner {
       display: flex;
     }

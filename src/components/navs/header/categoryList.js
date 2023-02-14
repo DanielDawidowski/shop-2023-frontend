@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
+import { getCategories } from "../../../functions/getCategories";
 import data from "../../../data.json";
 
 const CategoryList = ({
@@ -22,25 +23,6 @@ const CategoryList = ({
     // console.log("category ---", category);
   };
 
-  const getCategories = (products) => {
-    let categories = [];
-
-    for (let i = 0; i < products.length; i++) {
-      let category =
-        products[i].category.charAt(0).toUpperCase() +
-        products[i].category.slice(1);
-      if (
-        (!categories.includes(category) && gender === products[i].gender) ||
-        (!categories.includes(category) && gender === "")
-      ) {
-        categories.push(category);
-      }
-    }
-    // console.log("categoryNames ---", categories);
-
-    return categories;
-  };
-
   const showSubCategory = (e) => {
     setHovered(true);
     setSubCategory(e.target.innerText.toLowerCase());
@@ -60,12 +42,12 @@ const CategoryList = ({
   return (
     <>
       {nav
-        ? getCategories(data).map((category, index) => (
+        ? getCategories(data, gender).map((category, index) => (
             <motion.li key={index} onClick={(e) => showDrawer(e)}>
               <h3>{category}</h3>
             </motion.li>
           ))
-        : getCategories(data).map((category, index) => (
+        : getCategories(data, gender).map((category, index) => (
             <motion.li
               key={index}
               onHoverStart={(e) => showSubCategory(e)}

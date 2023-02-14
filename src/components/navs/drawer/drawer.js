@@ -6,45 +6,10 @@ import { DrawerStyles } from "./drawerStyles";
 import { Icon } from "../../globalStyles/icon";
 import Hamburger from "../hamburger/hamburger";
 import Logo from "../../logo/logo";
+import { getSubCategories } from "../../../functions/getSubCategories";
 
 function Drawer({ toggleDrawer, setToggleDrawer, setToggleMenu, toggleMenu }) {
   let { gender, category } = useSelector((state) => ({ ...state }));
-
-  function replaceSpaceWithDash(str) {
-    return str.replaceAll("_", " ");
-  }
-
-  const getSubCategories = (products, category) => {
-    let subCategories = [];
-    let subIcons = [];
-
-    for (let i = 0; i < products.length; i++) {
-      let subCat =
-        products[i].sub_category.charAt(0).toUpperCase() +
-        products[i].sub_category.slice(1);
-      let subIcon = products[i].icon;
-      if (
-        (!subCategories.includes(subCat) &&
-          category === products[i].category &&
-          gender === products[i].gender) ||
-        (!subCategories.includes(subCat) &&
-          category === products[i].category &&
-          gender === "")
-      ) {
-        subCategories.push(subCat);
-        subIcons.push(subIcon);
-      }
-    }
-
-    return subCategories.map((el, index) => {
-      return (
-        <motion.li key={index} className="sub__category--card">
-          <motion.img src={subIcons[index]} alt="icon" />
-          <motion.h3>{replaceSpaceWithDash(el)}</motion.h3>
-        </motion.li>
-      );
-    });
-  };
 
   return (
     <AnimatePresence>
@@ -86,7 +51,7 @@ function Drawer({ toggleDrawer, setToggleDrawer, setToggleMenu, toggleMenu }) {
             </div>
           </div>
           <ul className="drawer__content">
-            {getSubCategories(data, category)}
+            {getSubCategories(data, category, gender)}
           </ul>
         </DrawerStyles>
       )}

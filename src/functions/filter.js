@@ -5,7 +5,8 @@ export const filterItems = (
   maxValue,
   categories,
   sub_categories,
-  size
+  sizes,
+  colors
   // starNumbers
 ) => {
   let tempProducts = [...products];
@@ -31,8 +32,14 @@ export const filterItems = (
     );
   }
 
-  if (size.length > 0) {
-    tempProducts = tempProducts.filter((x) => size.toString().includes(x.size));
+  if (sizes.length > 0) {
+    tempProducts = tempProducts.filter((x) =>
+      sizes.toString().includes(x.size)
+    );
+  }
+
+  if (colors.length > 0) {
+    tempProducts = tempProducts.filter((x) => colors.includes(x.color));
   }
 
   // if (starNumbers.length > 0) {

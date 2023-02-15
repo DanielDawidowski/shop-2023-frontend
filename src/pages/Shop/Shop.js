@@ -6,8 +6,10 @@ import { Container } from "../../components/layout/layoutStyles";
 import Layout from "../../components/layout/layout";
 import { filterItems } from "../../functions/filter";
 import { getCategories } from "../../functions/getCategories";
-import { getSizes } from "../../functions/getSizes";
 import { getSubCategories } from "../../functions/getSubCategories";
+import { getSizes } from "../../functions/getSizes";
+import { getColors } from "../../functions/getColors";
+
 import data from "../../data.json";
 import { AnimatePresence } from "framer-motion";
 
@@ -17,7 +19,8 @@ const Shop = () => {
   const [maxValue, set_maxValue] = useState(200);
   const [cat, setCat] = useState("");
   const [subCat, setSubCat] = useState([]);
-  const [size, setSize] = useState([]);
+  const [sizes, setSizes] = useState([]);
+  const [colors, setColors] = useState([]);
 
   let dispatch = useDispatch();
   let { gender, category, sub_category } = useSelector((state) => ({
@@ -49,9 +52,19 @@ const Shop = () => {
 
   const handleSize = (e) => {
     if (e.target.checked) {
-      setSize([...size, e.target.value]);
+      setSizes([...sizes, e.target.value]);
     } else {
-      setSize(size.filter((sizes) => sizes !== e.target.value));
+      setSizes(sizes.filter((productSize) => productSize !== e.target.value));
+    }
+  };
+
+  const handleColors = (e) => {
+    if (e.target.checked) {
+      setColors([...colors, e.target.value]);
+    } else {
+      setColors(
+        colors.filter((productColor) => productColor !== e.target.value)
+      );
     }
   };
 
@@ -62,7 +75,8 @@ const Shop = () => {
     maxValue,
     cat,
     subCat,
-    size
+    sizes,
+    colors
   );
 
   let shoes;
@@ -109,8 +123,7 @@ const Shop = () => {
               })}
             </div>
             {/* )} */}
-            <br />
-            <br />
+
             <br />
             <br />
             <AnimatePresence>
@@ -132,24 +145,23 @@ const Shop = () => {
                 })}
               </div>
             </AnimatePresence>
-            <br />
-            <br />
+
             <br />
             <br />
             <div className="filter__option">
               {category === "shoes"
-                ? getSizes(data, (shoes = true)).map((sizeProduct, i) => {
+                ? getSizes(data, (shoes = true)).map((productSize, i) => {
                     return (
                       <div className="filter__option--checkbox" key={i}>
                         <input
-                          id={sizeProduct}
+                          id={productSize}
                           type="checkbox"
-                          name={sizeProduct}
-                          value={sizeProduct.toString()}
+                          name={productSize}
+                          value={productSize.toString()}
                           onChange={(e) => handleSize(e)}
-                          checked={size.includes(sizeProduct.toString())}
+                          checked={sizes.includes(productSize.toString())}
                         />
-                        <label htmlFor={sizeProduct}>{sizeProduct}</label>
+                        <label htmlFor={productSize}>{productSize}</label>
                       </div>
                     );
                   })
@@ -162,12 +174,32 @@ const Shop = () => {
                           name={sizeProduct}
                           value={sizeProduct.toString()}
                           onChange={(e) => handleSize(e)}
-                          checked={size.includes(sizeProduct.toString())}
+                          checked={sizes.includes(sizeProduct.toString())}
                         />
                         <label htmlFor={sizeProduct}>{sizeProduct}</label>
                       </div>
                     );
                   })}
+            </div>
+
+            <br />
+            <br />
+            <div className="filter__option">
+              {getColors(data).map((color, i) => {
+                return (
+                  <div className="filter__option--checkbox" key={i}>
+                    <input
+                      id={color}
+                      type="checkbox"
+                      name={color}
+                      value={color.toLowerCase()}
+                      onChange={(e) => handleColors(e)}
+                      checked={colors.includes(color)}
+                    />
+                    <label htmlFor={color}>{color}</label>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -180,6 +212,7 @@ const Shop = () => {
                 <h3>sub: {product.sub_category}</h3>
                 <h3>price: {product.price} $</h3>
                 <h3>size: {product.size} </h3>
+                <h3>color: {product.color} </h3>
               </div>
             ))}
           </div>

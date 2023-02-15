@@ -6,7 +6,7 @@ import data from "../../../data.json";
 
 function SubCategoryHeader({ isHovered, setHovered, subCategory }) {
   let { gender } = useSelector((state) => ({ ...state }));
-
+  let icon;
   return (
     <AnimatePresence>
       {isHovered && (
@@ -24,7 +24,7 @@ function SubCategoryHeader({ isHovered, setHovered, subCategory }) {
             exit={{ opacity: 0, transition: { duration: 0.1 } }}
             className="sub__category--inner"
           >
-            {getSubCategories(data, subCategory, gender)}
+            {getSubCategories(data, subCategory, gender, (icon = true))}
             {/* {showIcons(subCategoriesNames)} */}
             {/* {SubCategoryIcons.map((el) => el.sub_category.map((el) => el.icon))} */}
           </motion.div>

@@ -1,6 +1,9 @@
-import { motion } from "framer-motion";
-
-export const getSubCategories = (products, subCategory, gender) => {
+export const getSubCategories = (
+  products,
+  subCategory,
+  gender,
+  icon = false
+) => {
   let subCategories = [];
   let subIcons = [];
 
@@ -26,12 +29,14 @@ export const getSubCategories = (products, subCategory, gender) => {
     }
   }
 
-  return subCategories.map((el, index) => {
-    return (
-      <motion.div key={index} className="sub__category--card">
-        <motion.img src={subIcons[index]} alt="icon" />
-        <motion.h3>{replaceSpaceWithDash(el)}</motion.h3>
-      </motion.div>
-    );
-  });
+  return subCategories;
+
+  // return subCategories.map((el, index) => {
+  //   return (
+  //     <motion.div key={index} className="sub__category--card">
+  //       {icon && <motion.img src={subIcons[index]} alt="icon" />}
+  //       <motion.h3>{replaceSpaceWithDash(el)}</motion.h3>
+  //     </motion.div>
+  //   );
+  // });
 };

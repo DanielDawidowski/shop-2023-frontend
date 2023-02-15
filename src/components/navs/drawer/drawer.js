@@ -10,7 +10,7 @@ import { getSubCategories } from "../../../functions/getSubCategories";
 
 function Drawer({ toggleDrawer, setToggleDrawer, setToggleMenu, toggleMenu }) {
   let { gender, category } = useSelector((state) => ({ ...state }));
-
+  let icon;
   return (
     <AnimatePresence>
       {toggleDrawer && (
@@ -51,7 +51,7 @@ function Drawer({ toggleDrawer, setToggleDrawer, setToggleMenu, toggleMenu }) {
             </div>
           </div>
           <ul className="drawer__content">
-            {getSubCategories(data, category, gender)}
+            {getSubCategories(data, category, gender, (icon = true))}
           </ul>
         </DrawerStyles>
       )}

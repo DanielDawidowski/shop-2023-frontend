@@ -3,12 +3,13 @@ export const filterItems = (
   gender,
   minValue,
   maxValue,
-  // categories,
-  category,
+  categories,
+  sub_categories,
   size
   // starNumbers
 ) => {
   let tempProducts = [...products];
+  // console.log(tempProducts);
 
   if (minValue > 0 || maxValue > 0) {
     tempProducts = tempProducts.filter(
@@ -16,52 +17,23 @@ export const filterItems = (
     );
   }
 
-  // if (categories.length > 0) {
-  //   tempProducts = tempProducts.filter((x) =>
-  //     categories.includes(x.category.name)
-  //   );
-  // }
-
   if (gender.length > 0) {
     tempProducts = tempProducts.filter((x) => gender.includes(x.gender));
   }
 
-  // if (category.length > 0) {
-  //   tempProducts = tempProducts.filter((x) =>
-  //     category.includes(x.category.name)
-  //   );
-  // }
+  if (categories.length > 0) {
+    tempProducts = tempProducts.filter((x) => categories.includes(x.category));
+  }
 
-  // if (size === "44") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "44");
-  // }
-  // if (size === "43") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "43");
-  // }
-  // if (size === "42") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "42");
-  // }
-  // if (size === "41") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "41");
-  // }
-  // if (size === "40") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "40");
-  // }
-  // if (size === "XXL") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "XXL");
-  // }
-  // if (size === "XL") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "XL");
-  // }
-  // if (size === "L") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "L");
-  // }
-  // if (size === "M") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "M");
-  // }
-  // if (size === "S") {
-  //   tempProducts = tempProducts.filter((p) => p.size === "S");
-  // }
+  if (sub_categories.length > 0) {
+    tempProducts = tempProducts.filter((x) =>
+      sub_categories.includes(x.sub_category)
+    );
+  }
+
+  if (size.length > 0) {
+    tempProducts = tempProducts.filter((x) => size.toString().includes(x.size));
+  }
 
   // if (starNumbers.length > 0) {
   //   tempProducts = tempProducts.filter((x) => {

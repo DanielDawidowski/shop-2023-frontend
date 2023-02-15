@@ -9,7 +9,7 @@ export const DrawerStyles = styled(motion.div)`
   height: 100%;
   background: ${(props) => props.theme.background};
   border: 1px solid ${(props) => props.theme.color};
-
+  z-index: 999;
   @media (min-width: ${(props) => props.theme.breakpoint_small}) {
     border-bottom: none;
   }

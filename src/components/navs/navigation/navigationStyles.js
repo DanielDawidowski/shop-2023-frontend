@@ -9,6 +9,7 @@ export const NavStyles = styled(motion.nav)`
   height: 100%;
   background: ${(props) => props.theme.background};
   border-right: 1px solid ${(props) => props.theme.color};
+  z-index: 999;
   .nav__header {
     width: 100%;
     padding: 0 ${(props) => props.theme.size1};

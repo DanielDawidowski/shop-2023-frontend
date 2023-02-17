@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState("light");
   const [showModal, setShowModal] = useState(false);
   const [isHovered, setHovered] = useState(false);
-  const [subCategory, setSubCategory] = useState("");
+  const [category, setCategory] = useState("");
 
   const toggleTheme = () => {
     setCurrentTheme(currentTheme === "light" ? "dark" : "light");
@@ -39,12 +39,12 @@ const Layout = ({ children }) => {
             setToggleMenu={setToggleMenu}
             setShowModal={setShowModal}
             setHovered={setHovered}
-            setSubCategory={setSubCategory}
+            setCategory={setCategory}
           />
           <SubCategoryHeader
             isHovered={isHovered}
             setHovered={setHovered}
-            subCategory={subCategory}
+            category={category}
           />
           <Nav
             toggleMenu={toggleMenu}

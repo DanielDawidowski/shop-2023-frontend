@@ -8,7 +8,7 @@
     "color": "white",
     "gender": "women",
     "price": 99.99,
-    "size": 38,
+    "size": "38",
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/7p4H974/adidas-shoes-women.webp"
   },
@@ -21,7 +21,7 @@
     "color": "white",
     "gender": "women",
     "price": 49.99,
-    "size": 41,
+    "size": "41",
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/fFWtyC1/asics-shoes-women.webp"
   },
@@ -34,7 +34,7 @@
     "color": "grey",
     "gender": "women",
     "price": 39.99,
-    "size": 43,
+    "size": "43",
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/mB58QSm/nb-shoes-women.webp"
   },
@@ -47,7 +47,7 @@
     "color": "grey",
     "gender": "women",
     "price": 119.99,
-    "size": 40,
+    "size": "40",
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/3sxnMM2/nike-shoes-women.webp"
   },
@@ -60,7 +60,7 @@
     "color": "grey",
     "gender": "women",
     "price": 119.99,
-    "size": 39,
+    "size": "39",
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/4jtkVC6/reebok-shoes-outdoor-women.webp"
   },
@@ -73,7 +73,7 @@
     "color": "white",
     "gender": "women",
     "price": 129.99,
-    "size": 38,
+    "size": "38",
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/QCnb83p/salomon-shoes-women.webp"
   },
@@ -86,6 +86,7 @@
     "color": "white",
     "gender": "women",
     "price": 19.99,
+    "size": "M",
     "icon": "https://i.ibb.co/qJN4PJb/shirts-blouse.png",
     "img": "https://i.ibb.co/ZNMwyns/asics-shirt-women.webp"
   },
@@ -199,7 +200,7 @@
     "category": "dresses",
     "sub_category": "shirt",
     "mark": "adidas",
-    "color": "black",
+    "color": "white",
     "gender": "women",
     "price": 29.99,
     "size": "S",
@@ -306,7 +307,7 @@
     "color": "grey",
     "gender": "men",
     "price": 44.99,
-    "size": 43,
+    "size": "43",
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/qNxLLdt/asics-shoes-men.webp"
   },
@@ -319,7 +320,7 @@
     "color": "white",
     "gender": "men",
     "price": 99.99,
-    "size": 40,
+    "size": "40",
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/Ph8r7kj/adidas-shoes-men.webp"
   },
@@ -332,7 +333,7 @@
     "color": "white",
     "gender": "men",
     "price": 39.99,
-    "size": 38,
+    "size": "38",
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/tpq5y81/nb-shoes-men.webp"
   },
@@ -345,7 +346,7 @@
     "color": "black",
     "gender": "men",
     "price": 29.99,
-    "size": 38,
+    "size": "38",
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/FXHvVVY/reebok-shoes-men.webp"
   },
@@ -358,7 +359,7 @@
     "color": "white",
     "gender": "men",
     "price": 129.99,
-    "size": 39,
+    "size": "39",
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/yBKK0C4/salomon-shoes-men.webp"
   },
@@ -540,7 +541,7 @@
     "color": "black",
     "gender": "kids",
     "price": 19.99,
-    "size": 41,
+    "size": "41",
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/WW5PpYM/asics-shoes-kids.webp"
   },
@@ -553,7 +554,7 @@
     "color": "black",
     "gender": "kids",
     "price": 29.99,
-    "size": 42,
+    "size": "42",
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/WW5PpYM/asics-shoes-kids.webp"
   },
@@ -566,7 +567,7 @@
     "color": "white",
     "gender": "kids",
     "price": 24.99,
-    "size": 42,
+    "size": "42",
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/df2Qjcq/adidas-shoes-kids.webp"
   },
@@ -579,7 +580,7 @@
     "color": "white",
     "gender": "kids",
     "price": 29.99,
-    "size": 39,
+    "size": "39",
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/NZPxRw5/nb-shoes-kids.webp"
   },
@@ -592,7 +593,7 @@
     "color": "white",
     "gender": "kids",
     "price": 29.99,
-    "size": 38,
+    "size": "38",
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/ZVTZfvy/nike-shoes-kids.webp"
   },
@@ -605,7 +606,7 @@
     "color": "white",
     "gender": "kids",
     "price": 24.99,
-    "size": 38,
+    "size": "38",
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/b620Yg6/reebok-shoes-kids.webp"
   },
@@ -618,7 +619,7 @@
     "color": "black",
     "gender": "kids",
     "price": 49.99,
-    "size": 38,
+    "size": "38",
     "icon": "https://i.ibb.co/m57DdYc/shoes-outdoor.png",
     "img": "https://i.ibb.co/n1Vk8LS/salomon-shoes-kids.webp"
   },
@@ -693,7 +694,7 @@
     "category": "coats",
     "sub_category": "classic",
     "mark": "esprit",
-    "color": "blue",
+    "color": "red",
     "gender": "women",
     "price": 159.99,
     "size": "XL",
@@ -839,7 +840,7 @@
     "color": "brown",
     "gender": "women",
     "price": 39.99,
-    "size": 41,
+    "size": "41",
     "icon": "https://i.ibb.co/LNrdK7Y/shoes-high-heels.png",
     "img": "https://i.ibb.co/T027mcR/boss-shoes-high-women.webp"
   },
@@ -852,7 +853,7 @@
     "color": "pink",
     "gender": "women",
     "price": 19.99,
-    "size": 42,
+    "size": "42",
     "icon": "https://i.ibb.co/58xCBnQ/shoes-sandal.png",
     "img": "https://i.ibb.co/4RFzgVs/ecco-shoes-sandals-women.webp"
   },
@@ -865,7 +866,7 @@
     "color": "black",
     "gender": "women",
     "price": 29.99,
-    "size": 43,
+    "size": "43",
     "icon": "https://i.ibb.co/KjQ38bX/trousers-chinos.png",
     "img": "https://i.ibb.co/FKmfGbW/boss-trousers-chinos-women.webp"
   },
@@ -1008,7 +1009,7 @@
     "color": "brown",
     "gender": "men",
     "price": 24.99,
-    "size": 42,
+    "size": "42",
     "icon": "https://i.ibb.co/58xCBnQ/shoes-sandal.png",
     "img": "https://i.ibb.co/51Wc2fX/adidas-shoes-sandals-men.webp"
   },
@@ -1021,7 +1022,7 @@
     "color": "brown",
     "gender": "men",
     "price": 74.99,
-    "size": 43,
+    "size": "43",
     "icon": "https://i.ibb.co/3MvnQzR/shoes-business.png",
     "img": "https://i.ibb.co/v1gGVSN/bugatti-shoes-business-men.webp"
   },
@@ -1034,7 +1035,7 @@
     "color": "white",
     "gender": "men",
     "price": 44.99,
-    "size": 39,
+    "size": "39",
     "icon": "https://i.ibb.co/b7sytG5/shoes-sneakers.png",
     "img": "https://i.ibb.co/hcnnj32/nike-shoes-seakers-men.webp"
   },
@@ -1047,7 +1048,7 @@
     "color": "black",
     "gender": "men",
     "price": 84.99,
-    "size": 42,
+    "size": "42",
     "icon": "https://i.ibb.co/rFXQxDc/shoes-sport.png",
     "img": "https://i.ibb.co/CbYTW5N/nike-shoes-sport-men.webp"
   },
@@ -1268,7 +1269,7 @@
     "color": "black",
     "gender": "kids",
     "price": 29.99,
-    "size": 41,
+    "size": "41",
     "icon": "https://i.ibb.co/58xCBnQ/shoes-sandal.png",
     "img": "https://i.ibb.co/B4xZkdS/nike-shoes-sandals-kids.webp"
   },
@@ -1351,7 +1352,7 @@
     "img": "https://i.ibb.co/9n3QSmk/boss-coat-classic-men.webp"
   },
   {
-    "id": 106,
+    "id": 105,
     "name": "Denim Coat",
     "category": "coats",
     "sub_category": "short",
@@ -1364,7 +1365,7 @@
     "img": "https://i.ibb.co/nm8SSv4/denim-coat-short-men.webp"
   },
   {
-    "id": 107,
+    "id": 106,
     "name": "Esprit Coat",
     "category": "coats",
     "sub_category": "classic",
@@ -1377,7 +1378,7 @@
     "img": "https://i.ibb.co/sjxwb3k/esprit-coat-classic-men.webp"
   },
   {
-    "id": 108,
+    "id": 107,
     "name": "Esprit Coat",
     "category": "coats",
     "sub_category": "winter",
@@ -1390,7 +1391,7 @@
     "img": "https://i.ibb.co/dMC5kcf/esprit-coat-winter-men.webp"
   },
   {
-    "id": 109,
+    "id": 108,
     "name": "Next Coat",
     "category": "coats",
     "sub_category": "short",
@@ -1403,7 +1404,7 @@
     "img": "https://i.ibb.co/5ndgHfZ/next-coat-short-men.webp"
   },
   {
-    "id": 110,
+    "id": 109,
     "name": "Next Coat",
     "category": "coats",
     "sub_category": "winter",

@@ -1,19 +1,23 @@
-export const getSizes = (products, shoes = false) => {
-  let clothesSizes = [];
-  let shoesSizes = [];
+export const getSizes = (products, gender, category, sub_category) => {
+  let sizes = [];
 
   for (let i = 0; i < products.length; i++) {
     let size = products[i].size;
-    if (!shoesSizes.includes(size) && typeof size === "number") {
-      shoesSizes.push(size);
-    }
-    if (!clothesSizes.includes(size) && typeof size === "string") {
-      clothesSizes.push(size);
+    if (
+      (!sizes.includes(size) &&
+        category === products[i].category &&
+        sub_category.includes(products[i].sub_category) &&
+        gender === products[i].gender) ||
+      (!sizes.includes(size) &&
+        category === products[i].category &&
+        sub_category.includes(products[i].sub_category) &&
+        gender === "")
+    ) {
+      sizes.push(size);
     }
   }
 
-  clothesSizes.sort();
-  shoesSizes.sort();
+  sizes.sort();
 
-  return shoes ? shoesSizes : clothesSizes;
+  return sizes;
 };

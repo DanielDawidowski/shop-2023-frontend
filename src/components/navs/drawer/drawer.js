@@ -51,7 +51,7 @@ function Drawer({ toggleDrawer, setToggleDrawer, setToggleMenu, toggleMenu }) {
             </div>
           </div>
           <ul className="drawer__content">
-            {getSubCategories(data, category, gender, (icon = true))}
+            {getSubCategories(data, gender, category, (icon = true))}
           </ul>
         </DrawerStyles>
       )}

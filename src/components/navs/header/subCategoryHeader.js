@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { getSubCategories } from "../../../functions/getSubCategories";
 import data from "../../../data.json";
 
-function SubCategoryHeader({ isHovered, setHovered, subCategory }) {
+function SubCategoryHeader({ isHovered, setHovered, category }) {
   let { gender } = useSelector((state) => ({ ...state }));
   let icon;
   return (
@@ -24,7 +24,7 @@ function SubCategoryHeader({ isHovered, setHovered, subCategory }) {
             exit={{ opacity: 0, transition: { duration: 0.1 } }}
             className="sub__category--inner"
           >
-            {getSubCategories(data, subCategory, gender, (icon = true))}
+            {getSubCategories(data, gender, category, (icon = true))}
             {/* {showIcons(subCategoriesNames)} */}
             {/* {SubCategoryIcons.map((el) => el.sub_category.map((el) => el.icon))} */}
           </motion.div>

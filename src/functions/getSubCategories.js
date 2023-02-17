@@ -1,9 +1,6 @@
-export const getSubCategories = (
-  products,
-  subCategory,
-  gender,
-  icon = false
-) => {
+import { motion } from "framer-motion";
+
+export const getSubCategories = (products, gender, category, icon = false) => {
   let subCategories = [];
   let subIcons = [];
 
@@ -18,10 +15,10 @@ export const getSubCategories = (
     let subIcon = products[i].icon;
     if (
       (!subCategories.includes(subCat) &&
-        subCategory === products[i].category &&
+        category === products[i].category &&
         gender === products[i].gender) ||
       (!subCategories.includes(subCat) &&
-        subCategory === products[i].category &&
+        category === products[i].category &&
         gender === "")
     ) {
       subCategories.push(subCat);
@@ -29,14 +26,14 @@ export const getSubCategories = (
     }
   }
 
-  return subCategories;
-
-  // return subCategories.map((el, index) => {
-  //   return (
-  //     <motion.div key={index} className="sub__category--card">
-  //       {icon && <motion.img src={subIcons[index]} alt="icon" />}
-  //       <motion.h3>{replaceSpaceWithDash(el)}</motion.h3>
-  //     </motion.div>
-  //   );
-  // });
+  return !icon
+    ? subCategories
+    : subCategories.map((el, index) => {
+        return (
+          <motion.div key={index} className="sub__category--card">
+            {icon && <motion.img src={subIcons[index]} alt="icon" />}
+            <motion.h3>{replaceSpaceWithDash(el)}</motion.h3>
+          </motion.div>
+        );
+      });
 };

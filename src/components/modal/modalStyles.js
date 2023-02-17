@@ -8,16 +8,15 @@ export const ModalStyles = styled(motion.div)`
     background: ${(props) => props.theme.background};
     height: 100vh;
     width: 100vw;
-    z-index: 9;
   }
 
   .modal {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
     height: 100vh;
     width: 100%;
+    z-index: 2;
     background: ${(props) => props.theme.background};
     .modal--content {
       display: flex;

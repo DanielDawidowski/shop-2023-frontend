@@ -6,7 +6,7 @@ import data from "../../../data.json";
 
 const CategoryList = ({
   setHovered,
-  setSubCategory,
+  setCategory,
   setToggleDrawer,
   nav = false,
 }) => {
@@ -14,7 +14,7 @@ const CategoryList = ({
 
   let dispatch = useDispatch();
 
-  const setCategory = (category) => {
+  const setCategoryProduct = (category) => {
     // add to redux state
     dispatch({
       type: "CATEGORY",
@@ -25,13 +25,13 @@ const CategoryList = ({
 
   const showSubCategory = (e) => {
     setHovered(true);
-    setSubCategory(e.target.innerText.toLowerCase());
+    setCategory(e.target.innerText.toLowerCase());
     // console.log("showNavigation", e.target.innerText.toLowerCase());
   };
 
   const showDrawer = (e) => {
     setToggleDrawer(true);
-    setCategory(e.target.innerText.toLowerCase());
+    setCategoryProduct(e.target.innerText.toLowerCase());
   };
 
   const closeNavigation = () => {
@@ -52,7 +52,7 @@ const CategoryList = ({
               key={index}
               onHoverStart={(e) => showSubCategory(e)}
               onHoverEnd={() => closeNavigation()}
-              onClick={() => setCategory(category.toLowerCase())}
+              onClick={() => setCategoryProduct(category.toLowerCase())}
             >
               <h3>{category}</h3>
             </motion.li>

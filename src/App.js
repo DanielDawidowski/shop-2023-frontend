@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Shop from "./pages/Shop/Shop";
+import Product from "./pages/Product/Product";
 // import data from "./data.json";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/shop" component={Shop} />
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/product/:slug" component={Product} />
       </Switch>
     </AnimatePresence>
     // <div className="App">

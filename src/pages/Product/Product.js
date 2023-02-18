@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import _ from "lodash";
 import Layout from "../../components/layout/layout";
 import { ProductStyles } from "./productStyles";
 import Image from "../../components/image/image";
@@ -15,8 +16,6 @@ function Product() {
 
   let productID = showProductID(history.location.pathname);
 
-  console.log(productID);
-
   // redux
   const { cart } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
@@ -29,18 +28,26 @@ function Product() {
         cart = JSON.parse(localStorage.getItem("cart"));
       }
 
-      // console.log("uniqueProductID ---", uniqueProduct.id);
-      // console.log("productID ---", typeof productID);
-
+      let product = getProduct(data, productID).find((el) => el);
+      // console.log("price ---", product.price);
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id === product.id) {
+          cart[i].count = count;
+        }
+      }
       cart.push({
-        productID: productID,
+        ...product,
+        count: count,
       });
+      // remove duplicates
+      let unique = _.uniqWith(cart, _.isEqual);
+      console.log("unique", unique);
 
-      localStorage.setItem("cart", JSON.stringify(cart));
+      localStorage.setItem("cart", JSON.stringify(unique));
 
       dispatch({
         type: "ADD_TO_CART",
-        payload: cart,
+        payload: unique,
       });
     }
   };

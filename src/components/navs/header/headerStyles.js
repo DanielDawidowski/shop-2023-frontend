@@ -44,8 +44,8 @@ export const HeaderStyles = styled(motion.header)`
         position: relative;
         &--amount {
           position: absolute;
-          top: -10%;
-          left: 25%;
+          top: -5%;
+          right: -5%;
           background: ${(props) => props.theme.red};
           border-radius: 13px;
           font-size: 10px;

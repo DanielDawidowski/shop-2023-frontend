@@ -69,7 +69,6 @@ function Product() {
             <h3>size: {product.size} </h3>
             <h3>color: {product.color} </h3>
             <h3>brand: {product.mark} </h3>
-            <span>{cart.length}</span>
           </div>
         ))}
         <button onClick={handleAddToCart}>Add to Cart</button>

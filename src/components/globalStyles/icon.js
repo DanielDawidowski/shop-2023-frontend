@@ -5,6 +5,7 @@ export const Icon = styled(motion.svg)`
   width: 35px;
   height: 35px;
   fill: ${(props) => props.theme.color};
+
   :hover {
     /* border-top: 1px solid ${(props) => props.theme.red};
     border-right: 1px solid ${(props) => props.theme.red};

@@ -30,6 +30,14 @@ export const ProductStyles = styled(motion.div)`
         position: absolute;
         right: 0;
         top: 5%;
+        display: grid;
+        place-items: center;
+        background: ${(props) => props.theme.background};
+
+        svg {
+          width: 37px;
+          height: 37px;
+        }
       }
     }
     &__content {

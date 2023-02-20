@@ -9,6 +9,7 @@ export const CartStyles = styled(motion.div)`
     "b";
   margin-top: 10%;
   gap: 2%;
+  padding: ${(props) => props.theme.size1};
   @media (min-width: ${(props) => props.theme.breakpoint_small}) {
     grid-template-areas: "a a b";
   }
@@ -25,6 +26,7 @@ export const CartStyles = styled(motion.div)`
       margin-bottom: ${(props) => props.theme.size1};
       .cart__item--image {
         width: 50px;
+        cursor: pointer;
       }
       .cart__item--content {
         display: grid;
@@ -45,6 +47,7 @@ export const CartStyles = styled(motion.div)`
               }
             }
             h2 {
+              cursor: pointer;
               width: 350px;
               @media (max-width: ${(props) => props.theme.breakpoint_small}) {
                 font-size: ${(props) => props.theme.size3};
@@ -56,7 +59,8 @@ export const CartStyles = styled(motion.div)`
       }
       .cart__content--content {
         margin: ${(props) => props.theme.size3} 0;
-
+        display: flex;
+        justify-content: space-between;
         .cart__content--counts {
           display: flex;
           align-items: center;

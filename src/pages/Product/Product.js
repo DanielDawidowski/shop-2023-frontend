@@ -7,6 +7,9 @@ import { ProductStyles } from "./productStyles";
 import Image from "../../components/image/image";
 import data from "../../data.json";
 import { getProduct } from "../../functions/getProduct";
+import { Container } from "../../components/layout/layoutStyles";
+import { GoBackButton } from "../../components/buttons/goBack/back";
+import { Wishlist } from "../../components/buttons/wishlist/wishlist";
 
 function Product() {
   const [count, setCount] = useState(1);
@@ -54,25 +57,49 @@ function Product() {
 
   return (
     <Layout>
-      <ProductStyles>
-        {getProduct(data, productID).map((product, i) => (
-          <div key={i}>
-            <div className="product__card--image">
-              <Image src={product.img} alt={product.name} />
+      <Container>
+        <ProductStyles>
+          {getProduct(data, productID).map((product, i) => (
+            <div key={i} className="product">
+              <div className="product__image">
+                <div className="product__image--back">
+                  <GoBackButton />
+                </div>
+                <Image src={product.img} alt={product.name} />
+                <div className="product__image--wishlist">
+                  <Wishlist />
+                </div>
+              </div>
+              <div className="product__content">
+                <div className="product__content--title">
+                  <h4>Brand: {product.mark}</h4>
+                  <h2>
+                    <b>{product.name}</b>
+                  </h2>
+                  <h1>
+                    <b>$ {product.price}</b>
+                  </h1>
+                  <h3>Available sizes: {product.size} </h3>
+                </div>
+                <div className="product__content--color">
+                  <h4>
+                    color:
+                    <span style={{ color: `${product.color}` }}>
+                      <b>{product.color.toUpperCase()}</b>
+                    </span>
+                  </h4>
+                </div>
+                <div className="product__content--add">
+                  <button onClick={handleAddToCart}>
+                    <b>Add to Cart</b>
+                    {/* <small>{product.count === 0 && <b>Add to Cart</b>}</small> */}
+                  </button>
+                </div>
+              </div>
             </div>
-            <h3>{product.id}</h3>
-            <h1>{product.name}</h1>
-            <h3>gender: {product.gender}</h3>
-            <h3>category: {product.category}</h3>
-            <h3>sub: {product.sub_category}</h3>
-            <h3>price: {product.price} $</h3>
-            <h3>size: {product.size} </h3>
-            <h3>color: {product.color} </h3>
-            <h3>brand: {product.mark} </h3>
-          </div>
-        ))}
-        <button onClick={handleAddToCart}>Add to Cart</button>
-      </ProductStyles>
+          ))}
+        </ProductStyles>
+      </Container>
     </Layout>
   );
 }

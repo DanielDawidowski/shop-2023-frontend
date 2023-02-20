@@ -8,6 +8,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: ${(props) => props.theme.size6};
+    @media (max-width: ${(props) => props.theme.breakpoint_small}) {
+        font-size: ${(props) => props.theme.size5};
+    }
 }
 
 h2 {
@@ -32,5 +35,9 @@ h6 {
 
 b {
     font-weight: 700;
+}
+
+small {
+    font-style: italic;
 }
 `;

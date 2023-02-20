@@ -106,11 +106,13 @@ export const CategoryHeaderStyles = styled(motion.header)`
         border-radius: 4px;
       }
       svg {
+        cursor: pointer;
         padding: ${(props) => props.theme.size1} 0
           ${(props) => props.theme.size1} ${(props) => props.theme.size1};
       }
       h3 {
         font-weight: 700;
+        cursor: pointer;
       }
     }
     .category__header--search.media--query {

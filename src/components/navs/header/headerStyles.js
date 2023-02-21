@@ -40,6 +40,28 @@ export const HeaderStyles = styled(motion.header)`
 
     .header--icons {
       display: flex;
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+      .header__heart {
+        position: relative;
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+        span {
+          font-size: ${(props) => props.theme.size2};
+          display: grid;
+          place-items: center;
+          b {
+            position: absolute;
+            top: 22%;
+            color: ${(props) => props.theme.white};
+          }
+        }
+      }
       .header__cart {
         position: relative;
         &--amount {

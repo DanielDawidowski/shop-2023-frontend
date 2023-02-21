@@ -33,10 +33,10 @@ export const ProductStyles = styled(motion.div)`
         display: grid;
         place-items: center;
         background: ${(props) => props.theme.background};
-
+        padding: 4px;
         svg {
-          width: 37px;
-          height: 37px;
+          width: 30px;
+          height: 30px;
         }
       }
     }

@@ -92,6 +92,12 @@ export const CartStyles = styled(motion.div)`
             }
           }
         }
+        .cart__content--heart {
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
       }
     }
   }

@@ -5,7 +5,6 @@ import { Container } from "../../components/layout/layoutStyles";
 import Layout from "../../components/layout/layout";
 import { filterItems } from "../../functions/filter";
 import ProductCard from "../../components/cards/productCard";
-import Accordion from "../../components/accordion/accordion";
 
 import data from "../../data.json";
 import ShopFilters from "./shopFilters";

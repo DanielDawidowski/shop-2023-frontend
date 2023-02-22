@@ -2,6 +2,9 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ModalStyles } from "./modalStyles";
 import { Icon } from "../globalStyles/icon";
+import Image from "../image/image";
+import imgSearch from "../../assets/SVG/search.svg";
+
 const Modal = ({ showModal, setShowModal, children }) => {
   return (
     <AnimatePresence>
@@ -35,6 +38,9 @@ const Modal = ({ showModal, setShowModal, children }) => {
                 </Icon>
               </div>
               {children}
+              <div className="modal--image">
+                <Image src={imgSearch} alt={imgSearch} />
+              </div>
             </motion.div>
           </motion.div>
         </ModalStyles>

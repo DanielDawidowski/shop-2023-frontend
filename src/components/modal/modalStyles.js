@@ -20,6 +20,7 @@ export const ModalStyles = styled(motion.div)`
     background: ${(props) => props.theme.background};
     .modal--content {
       display: flex;
+      position: relative;
 
       .modal--close {
         border: 1px solid ${(props) => props.theme.color};
@@ -27,6 +28,12 @@ export const ModalStyles = styled(motion.div)`
         margin: 0;
         width: 45px;
         height: 45px;
+      }
+      .modal--image {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: ${(props) => props.theme.size6};
       }
     }
   }

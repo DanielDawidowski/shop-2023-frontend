@@ -7,8 +7,19 @@ export const WishlistStyles = styled(motion.div)`
   margin-top: 10%;
   padding: ${(props) => props.theme.size1};
 
+  .wish__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      margin-right: ${(props) => props.theme.size1};
+    }
+  }
+
   .wish__list {
     width: 100%;
+    margin-top: ${(props) => props.theme.size4};
+
     &--item {
       display: flex;
       width: 100%;
@@ -46,20 +57,35 @@ export const WishlistStyles = styled(motion.div)`
           .wish__content--icons {
             display: flex;
             align-items: center;
-            div {
+            .add {
+              position: relative;
               cursor: pointer;
-              &:nth-child(1) {
-                svg {
-                  width: 35px;
-                  height: 35px;
-                  margin-right: ${(props) => props.theme.size1};
+              svg {
+                width: 35px;
+                height: 35px;
+                margin-right: ${(props) => props.theme.size1};
+              }
+              &__amount {
+                position: absolute;
+                top: -10%;
+                right: 15%;
+                background: ${(props) => props.theme.red};
+                border-radius: 13px;
+                font-size: 10px;
+                width: 18px;
+                height: 18px;
+                display: grid;
+                place-items: center;
+                span {
+                  font-weight: 700;
                 }
               }
-              &:nth-child(2) {
-                svg {
-                  width: 24px;
-                  height: 24px;
-                }
+            }
+            .bin {
+              cursor: pointer;
+              svg {
+                width: 24px;
+                height: 24px;
               }
             }
           }

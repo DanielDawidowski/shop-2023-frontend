@@ -12,7 +12,19 @@ import { getProduct } from "../../functions/getProduct";
 
 function Wishlist() {
   const dispatch = useDispatch();
-  const { wish } = useSelector((state) => ({ ...state }));
+  const { wish, cart } = useSelector((state) => ({ ...state }));
+
+  const getTotalOfSameProductInWishlist = (id) => {
+    return cart.reduce((currentValue, nextValue) => {
+      if (nextValue.id === id) {
+        return currentValue + nextValue.count;
+      } else {
+        return currentValue;
+      }
+    }, 0);
+  };
+
+  let cartId = cart.map((w) => w.id);
 
   const handleAddToCart = (id) => {
     let cart = [];
@@ -26,7 +38,8 @@ function Wishlist() {
 
       let product = getProduct(data, id.toString()).find((el) => el.id === id);
 
-      console.log("product --->", product);
+      console.log("cart --->", cart);
+      console.log("product.id --->", product.id);
 
       cart.push({
         ...product,
@@ -45,6 +58,7 @@ function Wishlist() {
         if (p.id === id) {
           handleRemoveFromWishlist(id);
         }
+        return p;
       });
     }
   };
@@ -59,6 +73,7 @@ function Wishlist() {
         if (product.id === id) {
           wish.splice(i, 1);
         }
+        return product;
       });
       localStorage.setItem("wish", JSON.stringify(wish));
       dispatch({
@@ -72,6 +87,15 @@ function Wishlist() {
     <Layout>
       <Container>
         <WishlistStyles>
+          <div className="wish__title">
+            <h1>Wishlist</h1>
+            <Icon viewBox="0 0 512 450">
+              <path
+                d="m449.28 121.43a115.2 115.2 0 0 0 -137.89-35.75c-21.18 9.14-40.07 24.55-55.39 45-15.32-20.5-34.21-35.91-55.39-45a115.2 115.2 0 0 0 -137.89 35.75c-16.5 21.62-25.22 48.64-25.22 78.13 0 42.44 25.31 89 75.22 138.44 40.67 40.27 88.73 73.25 113.75 89.32a54.78 54.78 0 0 0 59.06 0c25-16.07 73.08-49.05 113.75-89.32 49.91-49.42 75.22-96 75.22-138.44 0-29.49-8.72-56.51-25.22-78.13z"
+                fill="#f94144"
+              />
+            </Icon>
+          </div>
           <ul className="wish__list">
             {wish.map((w, i) => (
               <li className="wish__list--item" key={i}>
@@ -93,12 +117,40 @@ function Wishlist() {
                       </h2>
                     </Link>
                     <div className="wish__content--icons">
-                      <div onClick={() => handleAddToCart(w.id)}>
-                        <Icon viewBox="-150.5 -200.5 1440 1440">
-                          <path d="M800.8 952c-31.2 0-56-24.8-56-56s24.8-56 56-56 56 24.8 56 56-25.6 56-56 56z m-448 0c-31.2 0-56-24.8-56-56s24.8-56 56-56 56 24.8 56 56-25.6 56-56 56zM344 792c-42.4 0-79.2-33.6-84-76l-54.4-382.4-31.2-178.4c-2.4-19.2-19.2-35.2-37.6-35.2H96c-13.6 0-24-10.4-24-24s10.4-24 24-24h40.8c42.4 0 80 33.6 85.6 76l31.2 178.4 54.4 383.2C309.6 728 326.4 744 344 744h520c13.6 0 24 10.4 24 24s-10.4 24-24 24H344z m40-128c-12.8 0-23.2-9.6-24-22.4-0.8-6.4 1.6-12.8 5.6-17.6s10.4-8 16-8l434.4-32c19.2 0 36-15.2 38.4-33.6l50.4-288c1.6-13.6-2.4-28-10.4-36.8-5.6-6.4-12.8-9.6-21.6-9.6H320c-13.6 0-24-10.4-24-24s10.4-24 24-24h554.4c22.4 0 42.4 9.6 57.6 25.6 16.8 19.2 24.8 47.2 21.6 75.2l-50.4 288c-4.8 41.6-42.4 74.4-84 74.4l-432 32c-1.6 0.8-2.4 0.8-3.2 0.8z" />
-                        </Icon>
-                      </div>
-                      <div onClick={() => handleRemoveFromWishlist(w.id)}>
+                      {!cartId.includes(w.id) ? (
+                        <div
+                          className="add"
+                          onClick={() => handleAddToCart(w.id)}
+                        >
+                          <Icon
+                            noborder="false"
+                            viewBox="-150.5 -200.5 1440 1440"
+                          >
+                            <path d="M800.8 952c-31.2 0-56-24.8-56-56s24.8-56 56-56 56 24.8 56 56-25.6 56-56 56z m-448 0c-31.2 0-56-24.8-56-56s24.8-56 56-56 56 24.8 56 56-25.6 56-56 56zM344 792c-42.4 0-79.2-33.6-84-76l-54.4-382.4-31.2-178.4c-2.4-19.2-19.2-35.2-37.6-35.2H96c-13.6 0-24-10.4-24-24s10.4-24 24-24h40.8c42.4 0 80 33.6 85.6 76l31.2 178.4 54.4 383.2C309.6 728 326.4 744 344 744h520c13.6 0 24 10.4 24 24s-10.4 24-24 24H344z m40-128c-12.8 0-23.2-9.6-24-22.4-0.8-6.4 1.6-12.8 5.6-17.6s10.4-8 16-8l434.4-32c19.2 0 36-15.2 38.4-33.6l50.4-288c1.6-13.6-2.4-28-10.4-36.8-5.6-6.4-12.8-9.6-21.6-9.6H320c-13.6 0-24-10.4-24-24s10.4-24 24-24h554.4c22.4 0 42.4 9.6 57.6 25.6 16.8 19.2 24.8 47.2 21.6 75.2l-50.4 288c-4.8 41.6-42.4 74.4-84 74.4l-432 32c-1.6 0.8-2.4 0.8-3.2 0.8z" />
+                          </Icon>
+                        </div>
+                      ) : (
+                        <Link to={`/cart`}>
+                          <div className="add">
+                            <Icon
+                              noborder="false"
+                              viewBox="-150.5 -200.5 1440 1440"
+                            >
+                              <path d="M800.8 952c-31.2 0-56-24.8-56-56s24.8-56 56-56 56 24.8 56 56-25.6 56-56 56z m-448 0c-31.2 0-56-24.8-56-56s24.8-56 56-56 56 24.8 56 56-25.6 56-56 56zM344 792c-42.4 0-79.2-33.6-84-76l-54.4-382.4-31.2-178.4c-2.4-19.2-19.2-35.2-37.6-35.2H96c-13.6 0-24-10.4-24-24s10.4-24 24-24h40.8c42.4 0 80 33.6 85.6 76l31.2 178.4 54.4 383.2C309.6 728 326.4 744 344 744h520c13.6 0 24 10.4 24 24s-10.4 24-24 24H344z m40-128c-12.8 0-23.2-9.6-24-22.4-0.8-6.4 1.6-12.8 5.6-17.6s10.4-8 16-8l434.4-32c19.2 0 36-15.2 38.4-33.6l50.4-288c1.6-13.6-2.4-28-10.4-36.8-5.6-6.4-12.8-9.6-21.6-9.6H320c-13.6 0-24-10.4-24-24s10.4-24 24-24h554.4c22.4 0 42.4 9.6 57.6 25.6 16.8 19.2 24.8 47.2 21.6 75.2l-50.4 288c-4.8 41.6-42.4 74.4-84 74.4l-432 32c-1.6 0.8-2.4 0.8-3.2 0.8z" />
+                            </Icon>
+                            <div className="add__amount">
+                              <span>
+                                {getTotalOfSameProductInWishlist(w.id)}
+                              </span>
+                            </div>
+                          </div>
+                        </Link>
+                      )}
+
+                      <div
+                        onClick={() => handleRemoveFromWishlist(w.id)}
+                        className="bin"
+                      >
                         <Icon viewBox="0 0 512 512" red="true" noborder="false">
                           <path
                             d="M62.205,150l26.569,320.735C90.678,493.865,110.38,512,133.598,512h244.805c23.218,0,42.92-18.135,44.824-41.265

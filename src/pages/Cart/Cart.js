@@ -47,6 +47,7 @@ function Cart() {
         if (product.id === id) {
           cart[i].count = cart[i].count + 1;
         }
+        return cart;
       });
       localStorage.setItem("cart", JSON.stringify(cart));
       dispatch({
@@ -69,6 +70,7 @@ function Cart() {
         if (cart[i].count === 0) {
           cart.splice(i, 1);
         }
+        return cart;
       });
       localStorage.setItem("cart", JSON.stringify(cart));
       dispatch({
@@ -88,6 +90,7 @@ function Cart() {
         if (product.id === id) {
           cart.splice(i, 1);
         }
+        return cart;
       });
       localStorage.setItem("cart", JSON.stringify(cart));
       dispatch({

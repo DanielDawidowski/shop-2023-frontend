@@ -13,6 +13,7 @@ const Shop = () => {
   const [products] = useState(data);
   const [minValue, set_minValue] = useState(0);
   const [maxValue, set_maxValue] = useState(200);
+  const [gen, setGen] = useState("");
   const [cat, setCat] = useState("");
   const [subCat, setSubCat] = useState([]);
   const [sizes, setSizes] = useState([]);
@@ -41,25 +42,54 @@ const Shop = () => {
     <Layout>
       <Container>
         <ShopStyles>
-          <ShopFilters
-            {...{
-              minValue,
-              maxValue,
-              cat,
-              subCat,
-              sizes,
-              colors,
-              brands,
-              set_minValue,
-              set_maxValue,
-              setCat,
-              setSubCat,
-              setSizes,
-              setColors,
-              setBrands,
-              shoes,
-            }}
-          />
+          <div className="media--query--small">
+            <ShopFilters
+              {...{
+                minValue,
+                maxValue,
+                gen,
+                setGen,
+                cat,
+                subCat,
+                sizes,
+                colors,
+                brands,
+                set_minValue,
+                set_maxValue,
+                setCat,
+                setSubCat,
+                setSizes,
+                setColors,
+                setBrands,
+                shoes,
+              }}
+              mediaQuery
+            />
+          </div>
+
+          <div className="media--query--big">
+            <ShopFilters
+              {...{
+                minValue,
+                maxValue,
+                gen,
+                setGen,
+                cat,
+                subCat,
+                sizes,
+                colors,
+                brands,
+                set_minValue,
+                set_maxValue,
+                setCat,
+                setSubCat,
+                setSizes,
+                setColors,
+                setBrands,
+                shoes,
+              }}
+            />
+          </div>
 
           <div className="main__shop">
             <div className="main__shop--inner">

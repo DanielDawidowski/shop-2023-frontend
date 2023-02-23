@@ -32,6 +32,7 @@ export const SearchStyles = styled(motion.div)`
   .search--list {
     grid-area: c;
     position: relative;
+    z-index: 2;
   }
   ul {
     @media (min-width: ${(props) => props.theme.breakpoint_small}) {

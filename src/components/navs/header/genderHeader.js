@@ -7,13 +7,12 @@ const GenderHeader = () => {
   let dispatch = useDispatch();
   let { gender } = useSelector((state) => ({ ...state }));
 
-  const setGender = (gender) => {
+  const setGender = (gen) => {
     // add to redux state
     dispatch({
       type: "GENDER",
-      payload: gender,
+      payload: gen,
     });
-    // console.log("gender ---", gender);
   };
 
   return (

@@ -40,6 +40,7 @@ const Layout = ({ children }) => {
             setShowModal={setShowModal}
             setHovered={setHovered}
             setCategory={setCategory}
+            isHovered={isHovered}
           />
           <SubCategoryHeader
             isHovered={isHovered}

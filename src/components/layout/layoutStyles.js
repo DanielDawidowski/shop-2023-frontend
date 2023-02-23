@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
 
 export const LayoutStyles = styled(motion.div)`
@@ -39,4 +39,12 @@ export const Container = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoint_medium}) {
     max-width: 1200px;
   }
+
+  ${(props) =>
+    props.small &&
+    css`
+      @media (max-width: ${(props) => props.theme.breakpoint_medium}) {
+        max-width: 800px;
+      }
+    `}
 `;

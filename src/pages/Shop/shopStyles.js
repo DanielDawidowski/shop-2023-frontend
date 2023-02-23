@@ -19,20 +19,46 @@ export const ShopStyles = styled(motion.section)`
     grid-area: a;
     background: ${(props) => props.theme.green};
     padding-top: ${(props) => props.theme.size6};
-    padding: ${(props) => props.theme.size6} ${(props) => props.theme.size3} 0
+    padding: ${(props) => props.theme.size3} ${(props) => props.theme.size3} 0
       ${(props) => props.theme.size3};
+
     @media (min-width: ${(props) => props.theme.breakpoint_small}) {
-      /* display: grid; */
+      padding: ${(props) => props.theme.size6} ${(props) => props.theme.size3} 0
+        ${(props) => props.theme.size3};
     }
 
-    .filter__option {
-      h3 {
-        font-weight: 700;
+    h3 {
+      font-weight: 700;
+    }
+
+    .filters--title {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      svg {
+        width: 25px;
+        height: 25px;
       }
-      &--item {
-        input[type="radio"],
-        input[type="checkbox"] {
-          margin-right: ${(props) => props.theme.size2};
+      div {
+        display: grid;
+        place-items: center;
+      }
+    }
+
+    .filters--content {
+      display: flex;
+      .filter__option {
+        display: grid;
+        h3 {
+          font-weight: 700;
+        }
+        &--item {
+          input[type="radio"],
+          input[type="checkbox"] {
+            margin-right: ${(props) => props.theme.size2};
+          }
         }
       }
     }
@@ -40,17 +66,31 @@ export const ShopStyles = styled(motion.section)`
 
   .main__shop {
     grid-area: b;
-    background: ${(props) => props.theme.red};
     padding: ${(props) => props.theme.size1};
     @media (min-width: ${(props) => props.theme.breakpoint_small}) {
       padding: ${(props) => props.theme.size6};
     }
     &--inner {
       display: grid;
+      place-items: center;
       grid-template-columns: repeat(2, 1fr);
+      gap: 1%;
       @media (min-width: ${(props) => props.theme.breakpoint_small}) {
         grid-template-columns: repeat(3, 1fr);
+        gap: 3%;
       }
+    }
+  }
+
+  .media--query--small {
+    @media (min-width: ${(props) => props.theme.breakpoint_small}) {
+      display: none;
+    }
+  }
+
+  .media--query--big {
+    @media (max-width: ${(props) => props.theme.breakpoint_small}) {
+      display: none;
     }
   }
 

@@ -1,16 +1,33 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import data from "../../../data.json";
 import { DrawerStyles } from "./drawerStyles";
 import { Icon } from "../../globalStyles/icon";
 import Hamburger from "../hamburger/hamburger";
 import Logo from "../../logo/logo";
 import { getSubCategories } from "../../../functions/getSubCategories";
+import { getSubIcons } from "../../../functions/getSubIcons";
 
 function Drawer({ toggleDrawer, setToggleDrawer, setToggleMenu, toggleMenu }) {
   let { gender, category } = useSelector((state) => ({ ...state }));
-  let icon;
+
+  let dispatch = useDispatch();
+
+  const setCategories = (category, sub) => {
+    dispatch({
+      type: "CATEGORY",
+      payload: category,
+    });
+    dispatch({
+      type: "SUB_CATEGORY",
+      payload: sub,
+    });
+    setToggleDrawer(false);
+    setToggleMenu(false);
+  };
+
   return (
     <AnimatePresence>
       {toggleDrawer && (
@@ -51,7 +68,25 @@ function Drawer({ toggleDrawer, setToggleDrawer, setToggleMenu, toggleMenu }) {
             </div>
           </div>
           <ul className="drawer__content">
-            {getSubCategories(data, gender, category, (icon = true))}
+            {getSubCategories(data, gender, category).map((el, index) => {
+              return (
+                // <Link to="/" onClick={() => console.log(el)}>
+                <Link
+                  to="/shop"
+                  key={index}
+                  onClick={() => setCategories(category, el.toLowerCase())}
+                >
+                  <motion.div className="sub__category--card">
+                    {getSubIcons(data, gender, category, el).map(
+                      (icon, index) => {
+                        return <motion.img key={index} src={icon} alt="icon" />;
+                      }
+                    )}
+                    <motion.h3>{el}</motion.h3>
+                  </motion.div>
+                </Link>
+              );
+            })}
           </ul>
         </DrawerStyles>
       )}

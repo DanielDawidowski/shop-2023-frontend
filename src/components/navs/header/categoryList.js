@@ -1,42 +1,49 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import { getCategories } from "../../../functions/getCategories";
 import data from "../../../data.json";
 
 const CategoryList = ({
   setHovered,
-  setCategory,
   setToggleDrawer,
+  setCategoryHovered,
   nav = false,
 }) => {
-  let { gender } = useSelector((state) => ({ ...state }));
+  let { gender } = useSelector((state) => ({
+    ...state,
+  }));
 
   let dispatch = useDispatch();
 
-  const setCategoryProduct = (category) => {
+  let history = useHistory();
+  let path = history.location.pathname.slice(1);
+
+  const setCategory = (category) => {
     // add to redux state
+    // path !== "shop" &&
     dispatch({
       type: "CATEGORY",
       payload: category,
     });
+    dispatch({
+      type: "SUB_CATEGORY",
+      payload: [],
+    });
+
     // console.log("category ---", category);
   };
 
   const showSubCategory = (e) => {
     setHovered(true);
-    setCategory(e.target.innerText.toLowerCase());
+    setCategoryHovered(e.target.innerText.toLowerCase());
     // console.log("showNavigation", e.target.innerText.toLowerCase());
   };
 
   const showDrawer = (e) => {
     setToggleDrawer(true);
-    setCategoryProduct(e.target.innerText.toLowerCase());
-  };
-
-  const closeNavigation = () => {
-    setHovered(false);
-    // setSubCategory("");
+    setCategory(e.target.innerText.toLowerCase());
   };
 
   return (
@@ -48,14 +55,19 @@ const CategoryList = ({
             </motion.li>
           ))
         : getCategories(data, gender).map((category, index) => (
-            <motion.li
+            <Link
+              to="/shop"
               key={index}
-              onHoverStart={(e) => showSubCategory(e)}
-              onHoverEnd={() => closeNavigation()}
-              onClick={() => setCategoryProduct(category.toLowerCase())}
+              onClick={() => setCategory(category.toLowerCase())}
             >
-              <h3>{category}</h3>
-            </motion.li>
+              <motion.li
+                onHoverStart={(e) => showSubCategory(e)}
+                onHoverEnd={() => setHovered(false)}
+                style={{ cursor: "pointer" }}
+              >
+                <h3>{category}</h3>
+              </motion.li>
+            </Link>
           ))}
     </>
   );

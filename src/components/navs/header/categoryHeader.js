@@ -12,7 +12,7 @@ function CategoryHeader({
   setToggleMenu,
   setShowModal,
   setHovered,
-  setCategory,
+  setCategoryHovered,
 }) {
   const [toggleInput, setToggleInput] = useState(false);
   const ref = useRef(null);
@@ -42,7 +42,10 @@ function CategoryHeader({
             <Hamburger setToggleMenu={setToggleMenu} toggleMenu={toggleMenu} />
           </div>
           <ul className="category__header--list">
-            <CategoryList setHovered={setHovered} setCategory={setCategory} />
+            <CategoryList
+              setHovered={setHovered}
+              setCategoryHovered={setCategoryHovered}
+            />
           </ul>
           <AnimatePresence>
             <motion.div

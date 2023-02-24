@@ -48,7 +48,7 @@ export const ShopStyles = styled(motion.section)`
     }
 
     .filters--content {
-      display: flex;
+      display: grid;
       .filter__option {
         display: grid;
         h3 {
@@ -77,20 +77,7 @@ export const ShopStyles = styled(motion.section)`
       gap: 1%;
       @media (min-width: ${(props) => props.theme.breakpoint_small}) {
         grid-template-columns: repeat(3, 1fr);
-        gap: 3%;
       }
-    }
-  }
-
-  .media--query--small {
-    @media (min-width: ${(props) => props.theme.breakpoint_small}) {
-      display: none;
-    }
-  }
-
-  .media--query--big {
-    @media (max-width: ${(props) => props.theme.breakpoint_small}) {
-      display: none;
     }
   }
 

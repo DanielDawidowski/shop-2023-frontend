@@ -14,15 +14,14 @@ const Shop = () => {
   const [minValue, set_minValue] = useState(0);
   const [maxValue, set_maxValue] = useState(200);
   const [gen, setGen] = useState("");
-  const [cat, setCat] = useState("");
-  const [subCat, setSubCat] = useState([]);
+
   const [sizes, setSizes] = useState([]);
   const [colors, setColors] = useState([]);
   const [brands, setBrands] = useState([]);
 
   let shoes;
 
-  let { gender } = useSelector((state) => ({
+  let { gender, category, sub_category } = useSelector((state) => ({
     ...state,
   }));
 
@@ -31,8 +30,8 @@ const Shop = () => {
     gender,
     minValue,
     maxValue,
-    cat,
-    subCat,
+    category,
+    sub_category,
     sizes,
     colors,
     brands
@@ -42,54 +41,25 @@ const Shop = () => {
     <Layout>
       <Container>
         <ShopStyles>
-          <div className="media--query--small">
-            <ShopFilters
-              {...{
-                minValue,
-                maxValue,
-                gen,
-                setGen,
-                cat,
-                subCat,
-                sizes,
-                colors,
-                brands,
-                set_minValue,
-                set_maxValue,
-                setCat,
-                setSubCat,
-                setSizes,
-                setColors,
-                setBrands,
-                shoes,
-              }}
-              mediaQuery
-            />
-          </div>
+          <ShopFilters
+            {...{
+              minValue,
+              maxValue,
+              gen,
+              setGen,
 
-          <div className="media--query--big">
-            <ShopFilters
-              {...{
-                minValue,
-                maxValue,
-                gen,
-                setGen,
-                cat,
-                subCat,
-                sizes,
-                colors,
-                brands,
-                set_minValue,
-                set_maxValue,
-                setCat,
-                setSubCat,
-                setSizes,
-                setColors,
-                setBrands,
-                shoes,
-              }}
-            />
-          </div>
+              sizes,
+              colors,
+              brands,
+              set_minValue,
+              set_maxValue,
+
+              setSizes,
+              setColors,
+              setBrands,
+              shoes,
+            }}
+          />
 
           <div className="main__shop">
             <div className="main__shop--inner">

@@ -3,8 +3,8 @@ export const filterItems = (
   gender,
   minValue,
   maxValue,
-  categories,
-  sub_categories,
+  category,
+  sub_category,
   size,
   colors,
   brands
@@ -23,13 +23,13 @@ export const filterItems = (
     tempProducts = tempProducts.filter((x) => gender.includes(x.gender));
   }
 
-  if (categories.length > 0) {
-    tempProducts = tempProducts.filter((x) => categories.includes(x.category));
+  if (category.length > 0) {
+    tempProducts = tempProducts.filter((x) => category.includes(x.category));
   }
 
-  if (sub_categories.length > 0) {
+  if (sub_category.length > 0) {
     tempProducts = tempProducts.filter((x) =>
-      sub_categories.includes(x.sub_category)
+      sub_category.includes(x.sub_category)
     );
   }
 

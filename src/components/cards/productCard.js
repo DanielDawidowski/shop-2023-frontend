@@ -6,8 +6,6 @@ import _ from "lodash";
 import Image from "../../components/image/image";
 import { ProductCardStyles } from "./productCardStyles";
 import { Icon } from "../../components/globalStyles/icon";
-import data from "../../data.json";
-import { getProduct } from "../../functions/getProduct";
 
 const ProductCard = ({ product }) => {
   const [wishlist, setWishlist] = useState(true);

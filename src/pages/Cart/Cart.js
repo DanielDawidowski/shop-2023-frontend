@@ -130,6 +130,16 @@ function Cart() {
     });
   };
 
+  const clearCart = () => {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("cart");
+      dispatch({
+        type: "ADD_TO_CART",
+        payload: [],
+      });
+    }
+  };
+
   let wishId = wish.map((w) => w.id);
 
   return (
@@ -238,7 +248,7 @@ function Cart() {
                 <h3>Total costs:</h3>
                 <b>$ {getTotalPrice().toFixed(2)}</b>
               </li>
-              <button className="btn--checkout">
+              <button className="btn--checkout" onClick={() => clearCart()}>
                 <b>Checkout</b>
               </button>
             </ul>

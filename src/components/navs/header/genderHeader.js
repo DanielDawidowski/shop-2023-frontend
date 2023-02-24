@@ -13,6 +13,14 @@ const GenderHeader = () => {
       type: "GENDER",
       payload: gen,
     });
+    dispatch({
+      type: "CATEGORY",
+      payload: "",
+    });
+    dispatch({
+      type: "SUB_CATEGORY",
+      payload: "",
+    });
   };
 
   return (

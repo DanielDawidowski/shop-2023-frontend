@@ -22,10 +22,10 @@ export const LayoutStyles = styled(motion.div)`
     display: grid;
     place-items: center;
     margin: ${(props) => props.theme.size1} ${(props) => props.theme.size6};
-    &:hover {
+    /* &:hover {
       border: 1px solid ${(props) => props.theme.red};
       border-radius: ${(props) => props.theme.size1};
-    }
+    } */
     img {
       width: 35px;
       height: 35px;

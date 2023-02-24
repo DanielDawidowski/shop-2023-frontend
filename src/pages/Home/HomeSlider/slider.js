@@ -7,10 +7,10 @@ function Slider() {
   const ref = useRef();
 
   useEffect(() => {
-    console.log("scrollWidth---", ref.current.scrollWidth);
-    console.log("offsetWidth---", ref.current.scrollWidth);
+    // console.log("scrollWidth---", ref.current.scrollWidth);
+    // console.log("offsetWidth---", ref.current.scrollWidth);
     setWidth(ref.current.scrollWidth * 1.25 - ref.current.scrollWidth);
-    console.log("width---", -width);
+    // console.log("width---", -width);
   }, [width]);
 
   return (

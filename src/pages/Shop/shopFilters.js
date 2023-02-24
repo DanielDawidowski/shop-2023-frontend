@@ -22,24 +22,22 @@ function ShopFilters({
   maxValue,
   gen,
   setGen,
-  cat,
-  subCat,
   sizes,
   colors,
   brands,
   set_minValue,
   set_maxValue,
-  setCat,
-  setSubCat,
   setSizes,
   setColors,
   setBrands,
-  mediaQuery,
 }) {
   const [isToggled, setIsToggled] = useState(false);
   let { gender, category, sub_category } = useSelector((state) => ({
     ...state,
   }));
+  console.log("gender ---", gender);
+  console.log("category ---", category);
+  console.log("sub_category ---", sub_category);
 
   let dispatch = useDispatch();
 
@@ -51,11 +49,11 @@ function ShopFilters({
   const handleGender = (e) => {
     let justChecked = e.target.value;
     if (typeof window !== "undefined") {
-      if (localStorage.getItem("gender")) {
-        gender = JSON.parse(localStorage.getItem("gender"));
-      }
+      // if (localStorage.getItem("gender")) {
+      //   gender = JSON.parse(localStorage.getItem("gender"));
+      // }
 
-      localStorage.setItem("gender", JSON.stringify(justChecked));
+      // localStorage.setItem("gender", JSON.stringify(justChecked));
       dispatch({
         type: "GENDER",
         payload: justChecked,
@@ -66,11 +64,9 @@ function ShopFilters({
       });
       dispatch({
         type: "SUB_CATEGORY",
-        payload: "",
+        payload: [],
       });
       setGen(justChecked);
-      setCat("");
-      setSubCat([]);
       setSizes([]);
       setColors([]);
       setBrands([]);
@@ -79,8 +75,6 @@ function ShopFilters({
 
   const handleCategory = (e) => {
     let justChecked = e.target.value;
-    setCat(justChecked);
-    setSubCat([]);
     setSizes([]);
     setColors([]);
     setBrands([]);
@@ -90,7 +84,7 @@ function ShopFilters({
     });
     dispatch({
       type: "SUB_CATEGORY",
-      payload: "",
+      payload: [],
     });
     // console.log("category---", justChecked);
   };
@@ -103,16 +97,16 @@ function ShopFilters({
       setBrands([]);
     }
     if (e.target.checked) {
-      setSubCat([...subCat, e.target.value]);
       dispatch({
         type: "SUB_CATEGORY",
-        payload: [...subCat, e.target.value],
+        payload: [...sub_category, e.target.value],
       });
     } else {
-      setSubCat(subCat.filter((subCategory) => subCategory !== e.target.value));
       dispatch({
         type: "SUB_CATEGORY",
-        payload: subCat.filter((subCategory) => subCategory !== e.target.value),
+        payload: sub_category.filter(
+          (subCategory) => subCategory !== e.target.value
+        ),
       });
     }
   };
@@ -171,7 +165,7 @@ function ShopFilters({
         </motion.div>
       </motion.div>
       <AnimatePresence>
-        {isToggled && (
+        {!isToggled && (
           <motion.div
             variants={variants}
             initial="closed"
@@ -225,31 +219,30 @@ function ShopFilters({
 
             <motion.div className="filter__option">
               <h3>Categories</h3>
-              {gender &&
-                getCategories(data, gender).map((c, i) => {
-                  return (
-                    <div className="filter__option--item" key={i}>
-                      <input
-                        id={c}
-                        type="radio"
-                        name={c}
-                        value={c.toLowerCase()}
-                        onChange={(e) => handleCategory(e)}
-                        checked={c.toLowerCase() === cat}
-                      />
-                      <label htmlFor={c} name={c}>
-                        {c}
-                      </label>
-                    </div>
-                  );
-                })}
+              {getCategories(data, gender).map((c, i) => {
+                return (
+                  <div className="filter__option--item" key={i}>
+                    <input
+                      id={c}
+                      type="radio"
+                      name={c}
+                      value={c.toLowerCase()}
+                      onChange={(e) => handleCategory(e)}
+                      checked={c.toLowerCase() === category}
+                    />
+                    <label htmlFor={c} name={c}>
+                      {c}
+                    </label>
+                  </div>
+                );
+              })}
             </motion.div>
 
             <br />
             <br />
 
             <motion.div className="filter__option">
-              {category && <h3>Sub Categories</h3>}
+              {category === "" || (category && <h3>Sub Categories</h3>)}
               {category &&
                 getSubCategories(data, gender, category).map((sub, i) => {
                   return (
@@ -260,8 +253,12 @@ function ShopFilters({
                         name={sub}
                         value={sub.toLowerCase()}
                         onChange={(e) => handleSubCategory(e)}
-                        checked={subCat.includes(sub.toLowerCase())}
+                        checked={
+                          sub_category.includes(sub.toLowerCase()) ||
+                          sub.toLowerCase() === sub_category
+                        }
                       />
+                      {/* {console.log("sub ----", sub)} */}
                       <label htmlFor={sub}>{sub}</label>
                     </div>
                   );

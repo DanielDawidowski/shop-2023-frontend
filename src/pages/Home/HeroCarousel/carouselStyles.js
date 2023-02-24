@@ -34,6 +34,10 @@ export const CarouselStyles = styled(motion.div)`
           "c b"
           ". b";
       }
+      svg {
+        width: 100px;
+        height: 100px;
+      }
 
       h3 {
         color: ${(props) => props.theme.white};
@@ -67,10 +71,10 @@ export const CarouselStyles = styled(motion.div)`
           grid-area: b;
         }
         .slideshow__title--icon {
-          border: 3px solid ${(props) => props.theme.black_opacity};
+          border: 3px solid ${(props) => props.theme.background};
           border-radius: 13px;
-          padding: ${(props) => props.theme.size2};
-          margin: ${(props) => props.theme.size2};
+          padding: 0 ${(props) => props.theme.size1};
+          margin: ${(props) => props.theme.size1};
           display: grid;
           place-items: center;
           img {

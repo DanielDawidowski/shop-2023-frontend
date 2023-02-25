@@ -17,7 +17,7 @@ export const ShopStyles = styled(motion.section)`
 
   .main__filters {
     grid-area: a;
-    background: ${(props) => props.theme.green};
+    border-bottom: 1px solid ${(props) => props.theme.color};
     padding-top: ${(props) => props.theme.size6};
     padding: ${(props) => props.theme.size3} ${(props) => props.theme.size3} 0
       ${(props) => props.theme.size3};

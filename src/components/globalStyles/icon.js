@@ -45,4 +45,9 @@ export const Icon = styled(motion.svg)`
     css`
       fill: ${(props) => props.theme.black};
     `}
+    ${(props) =>
+    props.yellow &&
+    css`
+      fill: ${(props) => props.theme.yellow};
+    `}
 `;

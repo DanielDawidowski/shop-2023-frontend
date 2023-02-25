@@ -16,7 +16,6 @@ export const CarouselStyles = styled(motion.div)`
       position: unset;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      background: ${(props) => props.theme.yellow};
     }
     &__title {
       position: absolute;
@@ -32,22 +31,32 @@ export const CarouselStyles = styled(motion.div)`
         grid-template-areas:
           "a b"
           "c b"
-          ". b";
+          "d b";
       }
       svg {
+        position: absolute;
+        top: -10%;
+        right: -5%;
         width: 100px;
         height: 100px;
+        z-index: -1;
+        @media (min-width: ${(props) => props.theme.breakpoint_small}) {
+          width: 200px;
+          height: 200px;
+          top: 5%;
+          left: 15%;
+        }
       }
 
       h3 {
-        color: ${(props) => props.theme.white};
         font-weight: 700;
         text-align: center;
         width: 80%;
         font-style: italic;
         font-family: "Playfair Display", serif;
-        font-size: ${(props) => props.theme.size4};
-
+        font-size: ${(props) => props.theme.size5};
+        text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+          1px 1px 0 #000000;
         @media (min-width: ${(props) => props.theme.breakpoint_small}) {
           width: 100%;
           font-size: ${(props) => props.theme.size6};
@@ -61,6 +70,8 @@ export const CarouselStyles = styled(motion.div)`
         @media (min-width: ${(props) => props.theme.breakpoint_small}) {
           display: block;
           grid-area: c;
+          font-size: ${(props) => props.theme.size5};
+          font-family: "Courier New", Courier, monospace;
         }
       }
       &--icons {
@@ -88,6 +99,15 @@ export const CarouselStyles = styled(motion.div)`
         @media (min-width: ${(props) => props.theme.breakpoint_small}) {
           display: grid;
           margin: ${(props) => props.theme.size2};
+          grid-area: d;
+        }
+        button {
+          border: none;
+          height: 25px;
+          width: 125px;
+          border-radius: 13px;
+          background: ${(props) => props.theme.background};
+          color: ${(props) => props.theme.color};
         }
       }
     }

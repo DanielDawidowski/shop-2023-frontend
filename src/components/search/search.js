@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { useSelector, useDispatch } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import _ from "lodash";
 import data from "../../data.json";
 import { SearchStyles } from "./searchStyles";
 
@@ -11,7 +12,6 @@ const Search = () => {
   // const [selectedGender, setSelectedGender] = useState("all");
 
   let dispatch = useDispatch();
-  // let {  category } = useSelector((state) => ({ ...state }));
 
   const setCategory = (category) => {
     // add to redux state
@@ -50,6 +50,28 @@ const Search = () => {
     );
   });
 
+  const addToReviews = (product) => {
+    let review = [];
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("review")) {
+        review = JSON.parse(localStorage.getItem("review"));
+      }
+      review.unshift({
+        ...product,
+      });
+
+      // remove duplicates
+      let unique = _.uniqWith(review, _.isEqual);
+
+      localStorage.setItem("review", JSON.stringify(unique));
+
+      dispatch({
+        type: "LATEST_REVIEW",
+        payload: unique,
+      });
+    }
+  };
+
   return (
     <SearchStyles>
       <select
@@ -75,7 +97,11 @@ const Search = () => {
         <ul>
           {searchTerm.length > 0 && filteredProducts.length !== 0
             ? filteredProducts.slice(0, 5).map((product) => (
-                <Link to={`/product/${product.id}`} key={product.id}>
+                <Link
+                  to={`/product/${product.id}`}
+                  key={product.id}
+                  onClick={() => addToReviews(product)}
+                >
                   <li>
                     <img src={product.img} alt={product.name} />
                     <div>

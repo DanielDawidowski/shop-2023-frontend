@@ -35,9 +35,9 @@ function ShopFilters({
   let { gender, category, sub_category } = useSelector((state) => ({
     ...state,
   }));
-  console.log("gender ---", gender);
-  console.log("category ---", category);
-  console.log("sub_category ---", sub_category);
+  // console.log("gender ---", gender);
+  // console.log("category ---", category);
+  // console.log("sub_category ---", sub_category);
 
   let dispatch = useDispatch();
 
@@ -175,21 +175,21 @@ function ShopFilters({
             className="filters--content"
           >
             {/* <motion.div className="filter__option">
-        <h3>Price</h3>
-        <MultiRangeSlider
-          min={0}
-          max={200}
-          step={5}
-          minValue={minValue}
-          maxValue={maxValue}
-          onChange={(e) => {
-            handlePrice(e);
-          }}
-          labels={[minValue, maxValue]}
-          preventWheel={true}
-          ruler={false}
-        />
-      </motion.div> */}
+              <h3>Price</h3>
+              <MultiRangeSlider
+                min={0}
+                max={200}
+                step={5}
+                minValue={minValue}
+                maxValue={maxValue}
+                onChange={(e) => {
+                  handlePrice(e);
+                }}
+                labels={[minValue, maxValue]}
+                preventWheel={true}
+                ruler={false}
+              />
+            </motion.div> */}
 
             <br />
             <br />

@@ -48,6 +48,28 @@ const ProductCard = ({ product }) => {
 
   let wishId = wish.map((w) => w.id);
 
+  const addToReviews = (product) => {
+    let review = [];
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("review")) {
+        review = JSON.parse(localStorage.getItem("review"));
+      }
+      review.unshift({
+        ...product,
+      });
+
+      // remove duplicates
+      let unique = _.uniqWith(review, _.isEqual);
+
+      localStorage.setItem("review", JSON.stringify(unique));
+
+      dispatch({
+        type: "LATEST_REVIEW",
+        payload: unique,
+      });
+    }
+  };
+
   return (
     <ProductCardStyles>
       <motion.div className="product__card">
@@ -98,7 +120,11 @@ const ProductCard = ({ product }) => {
           )}
         </motion.div>
         <div className="product__card--content">
-          <Link to={`/product/${id}`} key={id}>
+          <Link
+            to={`/product/${id}`}
+            key={id}
+            onClick={() => addToReviews(product)}
+          >
             <h4> {mark} </h4>
             <h2>
               <b>{name}</b>

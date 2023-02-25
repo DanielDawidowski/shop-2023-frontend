@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { ShopStyles } from "./shopStyles";
 import { Container } from "../../components/layout/layoutStyles";
 import Layout from "../../components/layout/layout";
@@ -47,13 +47,11 @@ const Shop = () => {
               maxValue,
               gen,
               setGen,
-
               sizes,
               colors,
               brands,
               set_minValue,
               set_maxValue,
-
               setSizes,
               setColors,
               setBrands,
@@ -64,7 +62,7 @@ const Shop = () => {
           <div className="main__shop">
             <div className="main__shop--inner">
               {filteredItems.map((product, i) => {
-                return <ProductCard key={i} product={product} />;
+                return <ProductCard product={product} key={i} />;
               })}
             </div>
           </div>

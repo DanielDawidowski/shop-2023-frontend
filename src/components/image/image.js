@@ -10,7 +10,7 @@ function Image({ src, alt }) {
     setTimeout(() => setPulsing(false), 600);
   };
 
-  return <motion.img onLoad={imageLoaded} src={src} alt={alt} />;
+  return <motion.img onLoad={imageLoaded} src={src} alt={alt} loading="lazy" />;
 }
 
 export default Image;

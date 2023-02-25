@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { items } from "./iconsArrays";
 import { CarouselStyles } from "./carouselStyles";
 import { Icon } from "../../../components/globalStyles/icon";
+import Logo from "../../../components/logo/logo";
+import { Link } from "react-router-dom";
 
 const container = {
   hidden: { opacity: 0 },
@@ -96,29 +98,24 @@ function Carousel() {
             {/* <motion.h3 style={{ fontSize: items[index].size }}>
               {items[index].title}
             </motion.h3> */}
-            <motion.h3 variants={item} initial="hidden" animate="show">
+            <motion.h3
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0, transition: { delay: 0.4 } }}
+              style={{ color: items[index].color }}
+            >
               {items[index].title}
             </motion.h3>
-            <Icon viewBox="0 0 86 79" noborder="true">
-              <path d="M53.4934 59.998L43.2474 41.998L63.7394 41.998L53.4934 59.998Z" />
-              <path d="M12.0847 60.0273L1.83873 42.0273L22.3307 42.0273L12.0847 60.0273Z" />
-              <path d="M53.4934 23.999L43.2474 5.99902L63.7394 5.99902L53.4934 23.999Z" />
-              <path d="M53.4934 77.999L43.2474 59.999L63.7394 59.999L53.4934 77.999Z" />
-              <path d="M12.0847 24.0283L1.83873 6.02832L22.3307 6.02832L12.0847 24.0283Z" />
-              <path d="M12.0847 78.0283L1.83873 60.0283L22.3307 60.0283L12.0847 78.0283Z" />
-              <path d="M53.4934 41.998L43.2474 23.998L63.7394 23.998L53.4934 41.998Z" />
-              <path d="M12.0847 42.0273L1.83873 24.0273L22.3307 24.0273L12.0847 42.0273Z" />
-              <path d="M74.169 60.0273L63.923 42.0273L84.4149 42.0273L74.169 60.0273Z" />
-              <path d="M32.7603 60.0566L22.5143 42.0566L43.0063 42.0566L32.7603 60.0566Z" />
-              <path d="M74.169 24.0283L63.923 6.02832L84.4149 6.02832L74.169 24.0283Z" />
-              <path d="M74.169 78.0283L63.923 60.0283L84.4149 60.0283L74.169 78.0283Z" />
-              <path d="M32.7603 24.0576L22.5143 6.05761L43.0063 6.05762L32.7603 24.0576Z" />
-              <path d="M32.7603 78.0576L22.5143 60.0576L43.0063 60.0576L32.7603 78.0576Z" />
-              <path d="M74.169 42.0273L63.923 24.0273L84.4149 24.0273L74.169 42.0273Z" />
-              <path d="M32.7603 42.0566L22.5143 24.0566L43.0063 24.0566L32.7603 42.0566Z" />
-            </Icon>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.3 } }}
+            >
+              <Logo text="false" />
+            </motion.div>
             {/* <motion.h3>{items[index].id}</motion.h3> */}
-            <motion.h4 variants={item} initial="hidden" animate="show">
+            <motion.h4
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.3 } }}
+            >
               {items[index].sub_title}
             </motion.h4>
             <motion.ul
@@ -143,15 +140,19 @@ function Carousel() {
                 );
               })}
             </motion.ul>
-            <motion.div>
-              <motion.button
-                className="slideshow__title--btn"
-                variants={item}
-                initial="hidden"
-                animate="show"
-              >
-                Show Now
-              </motion.button>
+            <motion.div className="slideshow__title--btn">
+              <Link to="/shop">
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { delay: 0.8 },
+                  }}
+                  whileHover={{ scale: 1.4 }}
+                >
+                  Show Now
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
         </AnimatePresence>

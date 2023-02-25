@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
   const [isHovered, setHovered] = useState(false);
   const [categoryHovered, setCategoryHovered] = useState("");
-  const [subCategoryHovered, setSubCategoryHovered] = useState(false);
 
   const toggleTheme = () => {
     setCurrentTheme(currentTheme === "light" ? "dark" : "light");

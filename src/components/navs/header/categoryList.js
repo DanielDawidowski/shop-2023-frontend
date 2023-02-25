@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { getCategories } from "../../../functions/getCategories";
 import data from "../../../data.json";
@@ -16,9 +16,6 @@ const CategoryList = ({
   }));
 
   let dispatch = useDispatch();
-
-  let history = useHistory();
-  let path = history.location.pathname.slice(1);
 
   const setCategory = (category) => {
     // add to redux state

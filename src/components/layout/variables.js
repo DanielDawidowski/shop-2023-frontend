@@ -5,7 +5,7 @@ export const themeGlobal = {
   breakpoint_xsmall: "480px",
   white: "#F6F1F0",
   white_opacity: "rgba(255, 255, 255, 0.7)",
-  black: "#333333",
+  black: "#000000",
   black_opacity: "rgba(0, 0, 0, 0.7)",
   red: "#f94144",
   orange: "#f3722c",

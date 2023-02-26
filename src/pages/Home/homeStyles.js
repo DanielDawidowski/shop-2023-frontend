@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const HomeStyles = styled(motion.section)`
   overflow: hidden;
   .home__hero {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     @media (min-width: ${(props) => props.theme.breakpoint_small}) {
       background: ${(props) => props.theme.red};

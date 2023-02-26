@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const CarouselStyles = styled(motion.div)`
   display: flex;
-  height: 100vh;
+  height: 80vh;
   @media (min-width: ${(props) => props.theme.breakpoint_small}) {
     height: 80vh;
   }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { HomeSliderStyles } from "./homeSliderStyles";
+import { HomeSliderStyles } from "./sliderStyles";
 
-const Homeslider = (props) => {
+const HomeSlider = (props) => {
   const { children, show } = props;
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -86,4 +86,4 @@ const Homeslider = (props) => {
   );
 };
 
-export default Homeslider;
+export default HomeSlider;

@@ -1,6 +1,5 @@
 import React from "react";
 // import MultiRangeSlider from "multi-range-slider-react";
-import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import GenderFilter from "./filters/genderFilter";
 import CategoryFilter from "./filters/categoryFilter";
@@ -9,17 +8,7 @@ import SizeFilter from "./filters/sizeFilter";
 import ColorFilter from "./filters/colorFilter";
 import BrandFilter from "./filters/brandFilter";
 
-function ShopFilters({
-  minValue,
-  maxValue,
-  gen,
-  setGen,
-  set_minValue,
-  set_maxValue,
-  setSizes,
-  setColors,
-  setBrands,
-}) {
+function ShopFilters({ minValue, maxValue, set_minValue, set_maxValue }) {
   let { gender, category, sub_category, size, color, brand } = useSelector(
     (state) => ({
       ...state,

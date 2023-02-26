@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const ReviewsStyles = styled(motion.div)`
+export const ReviewsStyles = styled(motion.section)`
   width: 100%;
   overflow: hidden;
   margin-top: 10%;
-  height: 80vh;
+  height: 100%;
   h1 {
     margin: ${(props) => props.theme.size6} 0;
     @media (max-width: ${(props) => props.theme.breakpoint_small}) {

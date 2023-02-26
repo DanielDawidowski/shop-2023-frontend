@@ -61,7 +61,7 @@ const Shop = () => {
                 </Icon>
               </motion.div>
             </motion.div>
-            {!isToggled && (
+            {isToggled && (
               <AnimatePresence>
                 <motion.div
                   variants={variants}

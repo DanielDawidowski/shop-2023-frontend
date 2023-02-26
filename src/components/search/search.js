@@ -56,6 +56,7 @@ const Search = () => {
       if (localStorage.getItem("review")) {
         review = JSON.parse(localStorage.getItem("review"));
       }
+
       review.unshift({
         ...product,
       });

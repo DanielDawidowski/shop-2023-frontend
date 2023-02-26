@@ -10,33 +10,22 @@ export const ShopStyles = styled(motion.section)`
 
   @media (min-width: ${(props) => props.theme.breakpoint_small}) {
     grid-template-columns: 20% 80%;
-    grid-template-areas:
-      "a b"
-      "a b";
+    grid-template-areas: "a b";
   }
 
-  .main__filters {
+  .filters {
     grid-area: a;
-    border-bottom: 1px solid ${(props) => props.theme.color};
-    padding-top: ${(props) => props.theme.size6};
-    padding: ${(props) => props.theme.size3} ${(props) => props.theme.size3} 0
-      ${(props) => props.theme.size3};
+    padding: ${(props) => props.theme.size4} ${(props) => props.theme.size2}
+      ${(props) => props.theme.size2} ${(props) => props.theme.size2};
 
-    @media (min-width: ${(props) => props.theme.breakpoint_small}) {
-      padding: ${(props) => props.theme.size6} ${(props) => props.theme.size3} 0
-        ${(props) => props.theme.size3};
-    }
-
-    h3 {
-      font-weight: 700;
-    }
-
-    .filters--title {
+    .filters__title {
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-items: center;
-      height: 40px;
+      h3 {
+        font-weight: 700;
+      }
       svg {
         width: 25px;
         height: 25px;
@@ -47,17 +36,53 @@ export const ShopStyles = styled(motion.section)`
       }
     }
 
-    .filters--content {
+    .filters__main {
       display: grid;
-      .filter__option {
-        display: grid;
-        h3 {
-          font-weight: 700;
+      &--content {
+        padding: 0 ${(props) => props.theme.size2};
+        @media (min-width: ${(props) => props.theme.breakpoint_small}) {
+          padding: 0;
         }
-        &--item {
-          input[type="radio"],
-          input[type="checkbox"] {
-            margin-right: ${(props) => props.theme.size2};
+        .filter__option {
+          display: grid;
+          padding: ${(props) => props.theme.size2} 0;
+          h3 {
+            font-weight: 700;
+          }
+          &--item {
+            display: flex;
+            input[type="radio"],
+            input[type="checkbox"] {
+              margin-right: ${(props) => props.theme.size2};
+              display: grid;
+              place-content: center;
+            }
+
+            input[type="radio"]::before {
+              content: "";
+              width: ${(props) => props.theme.size2};
+              height: ${(props) => props.theme.size2};
+              border-radius: 50%;
+              transition: 120ms transform ease-in-out;
+            }
+
+            input[type="radio"]:checked::before {
+              transform: scale(1.1);
+              font-weight: 700;
+            }
+
+            input[type="checkbox"]::before {
+              content: "";
+              width: ${(props) => props.theme.size2};
+              height: ${(props) => props.theme.size2};
+              transform: scale(0);
+              transition: 120ms transform ease-in-out;
+            }
+
+            input[type="checkbox"]:checked::before {
+              transform: scale(1);
+              font-weight: 700;
+            }
           }
         }
       }

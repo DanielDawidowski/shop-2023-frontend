@@ -20,6 +20,18 @@ function SubCategoryHeader({ isHovered, setHovered, categoryHovered }) {
       type: "SUB_CATEGORY",
       payload: sub,
     });
+    dispatch({
+      type: "SIZE",
+      payload: [],
+    });
+    dispatch({
+      type: "COLOR",
+      payload: [],
+    });
+    dispatch({
+      type: "BRAND",
+      payload: [],
+    });
   };
 
   return (

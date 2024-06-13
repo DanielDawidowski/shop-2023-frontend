@@ -37,7 +37,7 @@ A modern e-commerce website where users can browse, filter, wishlist, and purcha
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/ecommerce-website.git
+    git clone https://github.com/DanielDawidowski/shop-2023-frontend
     cd ecommerce-website
     ```
 
